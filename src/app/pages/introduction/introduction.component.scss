@@ -1,0 +1,18 @@
+.intro-container {
+    background-image: url('/developer-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+
+    h1,
+    p {
+        text-shadow: 2px 2px 4px #424242
+    }
+
+    .row {
+        text-align: center;
+    }
+}
