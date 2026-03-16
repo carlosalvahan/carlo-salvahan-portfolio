@@ -80,12 +80,28 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:hover {
         transform: scale(1.5);
         transition: transform 0.3s ease-in-out;
         cursor: pointer;
-        filter: brightness(0.6);
+
+        i {
+            display:none;
+        }
+        
+        .hover-timeline-text, .fa-chevron-right {
+            color: white;
+            text-shadow: #424242 2px 2px 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
     }
+}
+
+.hover-timeline-text {
+    display:none;
 }
 
 p {
@@ -93,3 +109,4 @@ p {
     padding-right: 1rem;
     color: white;
 }
+

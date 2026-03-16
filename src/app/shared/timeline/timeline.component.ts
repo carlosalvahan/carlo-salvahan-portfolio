@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TimelineProps } from '../../props/timeline-props';
 import { CommonModule } from '@angular/common';
 
@@ -9,5 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './timeline.component.scss'
 })
 export class TimelineComponent {
-  timelineItems = input<TimelineProps[]>([])
+  timelineItems = input<TimelineProps[]>([]);
+  viewDetailsClick = output<TimelineProps>();
+
+  onViewDetails(title: TimelineProps) {
+    this.viewDetailsClick.emit(title);
+  }
 }

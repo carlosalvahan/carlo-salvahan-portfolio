@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { TimelineComponent } from '../../shared/timeline/timeline.component';
 import { TimelineProps } from '../../props/timeline-props';
 import ExperienceDescriptionConstants from '../../constants/experience.constants';
+import { CommonModule } from '@angular/common';
+import { ExperienceDetailPageComponent } from './experience-detail-page/experience-detail-page.component';
 
 @Component({
   selector: 'app-experience-page',
-  imports: [TimelineComponent],
+  imports: [TimelineComponent, CommonModule, ExperienceDetailPageComponent],
   templateUrl: './experience-page.component.html',
   styleUrl: './experience-page.component.scss'
 })
@@ -17,4 +19,15 @@ export class ExperiencePageComponent {
     new TimelineProps('fa-solid fa-plane', ExperienceDescriptionConstants[2018], '2018', '#f8bbd0'), // airplane
     new TimelineProps('fa-solid fa-graduation-cap', ExperienceDescriptionConstants[2016], '2016', '#64b5f6'), // graduation
   ];
+
+  detailSelected: TimelineProps | null = null;
+
+  onViewDetails($event: TimelineProps) {
+      console.log('View details for:', $event);
+      this.detailSelected = $event;
+  }
+
+  onBackClick() {
+      this.detailSelected = null;
+  }
 }
