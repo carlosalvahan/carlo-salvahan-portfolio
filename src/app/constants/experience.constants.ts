@@ -1,0 +1,10 @@
+
+const ExperienceDescriptionConstants = {
+  2016: 'I graduated from Pamantasan ng Lungsod ng Maynila and began my professional journey at Accenture. After three months, I decided to pursue opportunities more closely aligned with my goal of becoming a developer. This led me to join a startup company, PCCW Solutions, where I continued to grow and develop my skills in software development.',
+  2018: 'I joined Indra Philippines and began specializing in frontend development using Angular. During my time there, I primarily worked on projects in the airline industry, contributing to applications such as flight booking systems, airline e-commerce platforms, and call center tools used for managing flight reservations and customer support.',
+  2020: 'I continued to pursue my path in Angular development and joined Prosource Global. During my time there, I worked on an insurance comparison and recommendation platform that helped users evaluate and select suitable insurance options. After a few months, I transitioned to IBM Solutions Inc. to continue expanding my experience in frontend development.',
+  2021: 'I am still employed under IBM Solutions as an Angular developer and have been working on projects related to U.S. tax filing systems. My first project focused on a tax advisory application designed to keep users informed about tax law updates and filing deadlines. I later worked on a property tax management platform that handles various aspects of property taxation, including asset management, tax bills, returns, and other related processes.',
+  2024: 'I transitioned to another project within IBM Solutions as a React Developer, working on systems related to U.S. veteran insurance policies. My role involves contributing to multiple features, including automatic insurance payments, manual bill payment processing, and fund transfer capabilities.'
+};
+
+export default ExperienceDescriptionConstants;
