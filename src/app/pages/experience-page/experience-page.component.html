@@ -1,5 +1,7 @@
-@if(detailSelected) {
-  <app-experience-detail-page [detailItem]="detailSelected" (backClick)="onBackClick()"></app-experience-detail-page>
-} @else {
-    <app-timeline [timelineItems]="experienceItems" (viewDetailsClick)="onViewDetails($event)"></app-timeline>
-}
+<div class="experience-page-container">
+    @if(detailSelected) {
+    <app-experience-detail-page [detailItem]="detailSelected" (backClick)="onBackClick()"></app-experience-detail-page>
+    } @else {
+        <app-timeline [timelineItems]="experienceItems" (viewDetailsClick)="onViewDetails($event)"></app-timeline>
+    }
+</div>

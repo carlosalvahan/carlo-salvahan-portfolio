@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TimelineComponent } from '../../shared/timeline/timeline.component';
 import { TimelineProps } from '../../props/timeline-props';
-import ExperienceDescriptionConstants from '../../constants/experience.constants';
+import { ExperienceDescriptionConstants } from '../../constants/experience.constants';
 import { CommonModule } from '@angular/common';
 import { ExperienceDetailPageComponent } from './experience-detail-page/experience-detail-page.component';
 
@@ -23,7 +23,6 @@ export class ExperiencePageComponent {
   detailSelected: TimelineProps | null = null;
 
   onViewDetails($event: TimelineProps) {
-      console.log('View details for:', $event);
       this.detailSelected = $event;
   }
 

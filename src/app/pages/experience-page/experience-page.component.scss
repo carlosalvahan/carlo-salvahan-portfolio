@@ -1,5 +1,8 @@
-app-timeline {
-    animation: slideContentRight 0.5s ease-out;
+.experience-page-container {
+    background-color: #484B54;
+    app-timeline {
+        animation: slideContentRight 0.5s ease-out;
+    }
 }
 
 @keyframes slideContentRight {
