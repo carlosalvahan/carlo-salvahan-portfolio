@@ -23,6 +23,8 @@
     height: 100vh;
     background-color: #484B54 ;
     overflow-y:auto;
+    position: relative;
+    z-index: 1;
 }
 
 .right-column, .left-column {
@@ -90,7 +92,7 @@ h3 {
             display:none;
         }
         
-        .hover-timeline-text, .fa-chevron-right {
+        .hover-timeline-text, .fa-chevron-up {
             color: white;
             text-shadow: #424242 2px 2px 4px;
             display: inline-flex;

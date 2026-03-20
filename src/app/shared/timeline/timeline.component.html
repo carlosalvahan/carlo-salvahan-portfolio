@@ -9,7 +9,7 @@
                     <div class="left-column-line" [ngStyle]="{'border-color': item.barColor}"></div>
                     <div class="timeline-image"  [ngStyle]="{'background-color': item.barColor}" (click)="onViewDetails(item)">
                         <i [ngClass]="item.iconClass" class="timeline-icon"></i>
-                        <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-up"></i></span>
                     </div>
                     <div class="line-connector" [ngStyle]="{'background-color': item.barColor}"></div>
                     } @else {
@@ -27,7 +27,7 @@
                     </div>
                     <div class="timeline-image" [ngStyle]="{'background-color': item.barColor}"  (click)="onViewDetails(item)">
                         <i [ngClass]="item.iconClass" class="timeline-icon" ></i>
-                        <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-up"></i></span>
                     </div>
                     <h3 [ngStyle]="{'text-shadow': '2px 2px 4px ' + item.barColor}">{{ item.title }}</h3>
                     } @else{

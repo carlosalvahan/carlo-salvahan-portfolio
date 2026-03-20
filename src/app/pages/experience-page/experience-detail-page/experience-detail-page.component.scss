@@ -1,52 +1,75 @@
+$item-box-shadow: 3px 5px 6px #616161;
+$text-shadow: #424242 2px 2px 4px;
+
 .full-screen-container {
-    animation: slideContentRight 1s ease-out;
+    animation: slideContentUp 1s ease-out forwards;
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    z-index: 2;
+    position: absolute;
+    background: #424224;
 
-    .header-container {
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-
-        i {
-            font-size: 2.2rem;
-            color: white;
-            text-shadow: #424242 2px 2px 4px;
-            margin-right: 1rem;
-            cursor: pointer;
-        }
+    &.closing {
+        animation: slideContentDown 1s ease-out forwards;
     }
+}
 
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
+.header-container {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 2.2rem;
         color: white;
-        text-shadow: #424242 2px 2px 4px;
-        font-weight: 700;
+        text-shadow: $text-shadow;
+        margin-right: 1rem;
+        cursor: pointer;
+        position: absolute;
+        right: 0.5rem;
+        &:hover {
+            transform: scale(1.5);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    text-shadow: $text-shadow;
+    font-weight: 700;
+}
+
+.details-content {
+    background-color: white;
+    flex: 1;
+    overflow-y: auto;
+
+    .detail-container {
+        margin: 2rem;
+
+        .company-header {
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin: 0;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            padding-bottom: 1rem;
+        }
     }
 
-    .details-content {
-        background-color: white;
-        flex: 1;
-        overflow-y: auto;
-
-        .detail-container {
-            margin: 2rem;
-
-            .company-header {
-                font-weight: 500;
-                font-size: 1.2rem;
-                margin: 0;
-                border-bottom: 1px solid #EFEFEF;
-                padding-bottom: 1rem;
-            }
-        }
+    .card {
+        border-width: 1px;
+        border-style: solid;
+        box-shadow: $item-box-shadow;
 
         .card-image {
             height: 100%;
-
+            background: white;
             img {
                 height: 16rem;
                 width: 16rem;
@@ -54,47 +77,68 @@
                 border: 2px solid #EFEFEF;
             }
         }
+    }
 
-        .detail-skills {
-            border: 2px solid #E3E3E3;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    .detail-skills {
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: $item-box-shadow;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            padding: 1rem;
+        }
+
+        .skill-list {
             display: flex;
-            flex-direction: column;
+            margin: 2rem;
 
-            h3 {
-                padding: 1rem;
-            }
-
-            .skill-list {
+            .skill-group {
                 display: flex;
-                margin: 2rem;
+                flex-direction: column;
+                justify-content: center;
 
-                .skill-group {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-
-                    .skill-item {
-                        font-size: 5rem;
+                .skill-item {
+                    font-size: 5rem;
+                    i:hover {
+                        transform: scale(1.5);
+                        transition: transform 0.3s ease-in-out;
+                        cursor: pointer;
                     }
+                }
 
-                    .skill-name {
-                        text-align: center;
-                    }
+                .skill-name {
+                    text-align: center;
                 }
             }
         }
     }
 }
 
-@keyframes slideContentRight {
+@keyframes slideContentUp {
     from {
-        transform: translateX(100vw);
+        transform: scale(0.8);
         opacity: 0;
+        transform-origin: center;
     }
 
     to {
-        transform: translateX(0);
+        transform: scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes slideContentDown {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.8);
+        opacity: 0;
+        transform-origin: center;
     }
 }

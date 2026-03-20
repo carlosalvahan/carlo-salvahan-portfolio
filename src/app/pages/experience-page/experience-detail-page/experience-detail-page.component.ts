@@ -16,6 +16,7 @@ export class ExperienceDetailPageComponent {
   companies: any[] = [];
   yearSkills: any[] = [];
   skills: any[] = [];
+  isClosing = false;
 
   constructor() {
     effect(() => {
@@ -26,7 +27,13 @@ export class ExperienceDetailPageComponent {
         return { ...SkillsConstants[skill as keyof typeof SkillsConstants], name: skill };
       });
       this.companies = Object.entries(ExperienceDetailsConstants[key]);
-      console.log(this.companies);
     });
+  }
+
+  onDownClick() {
+    this.isClosing = true;
+    setTimeout(() => {
+      this.backClick.emit();
+    }, 1000);
   }
 }
