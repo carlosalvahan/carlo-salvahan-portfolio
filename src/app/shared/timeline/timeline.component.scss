@@ -21,8 +21,8 @@
 
 .full-page-container {
     height: 100vh;
-    background-color: #484B54 ;
-    overflow-y:auto;
+    background-color: white;
+    margin-top: 1rem;
     position: relative;
     z-index: 1;
 }
@@ -67,12 +67,13 @@ h3 {
     color: white;
     margin: 0;
     font-weight: 700;
+    text-shadow: #616161 2px 2px 4px;
 }
 
 .timeline-icon {
     font-size: 5rem;
     color: white;
-    text-shadow: #424242 2px 2px 4px;
+    text-shadow: #212121 2px 2px 4px;
 }
 
 .timeline-image {
@@ -82,6 +83,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 2px 2px #616161;
 
     &:hover {
         transform: scale(1.5);
@@ -109,6 +111,6 @@ h3 {
 p {
     padding-left: 1rem;
     padding-right: 1rem;
-    color: white;
+    color: #212121;
 }
 

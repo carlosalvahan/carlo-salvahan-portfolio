@@ -1,18 +1,47 @@
 .experience-page-container {
-    background-color: #484B54;
-    app-timeline {
-        animation: slideContentRight 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+
+  .page-header {
+    flex: 0 0 15rem;
+    background: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px #616161;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    i {
+        // color: #ffab00;
     }
+  }
+
+  .page-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    
+    app-timeline {
+      animation: slideContentRight 0.5s ease-out;
+    }
+  }
 }
 
 @keyframes slideContentRight {
-    from {
-        transform: translateX(-100vw);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

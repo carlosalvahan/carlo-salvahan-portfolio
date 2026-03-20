@@ -7,8 +7,9 @@ $text-shadow: #424242 2px 2px 4px;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    z-index: 2;
+    z-index: 3;
     position: absolute;
+    top: 0;
     background: #424224;
 
     &.closing {
@@ -25,13 +26,17 @@ $text-shadow: #424242 2px 2px 4px;
         font-size: 2.2rem;
         color: white;
         text-shadow: $text-shadow;
-        margin-right: 1rem;
-        cursor: pointer;
-        position: absolute;
-        right: 0.5rem;
-        &:hover {
-            transform: scale(1.5);
-            transition: transform 0.3s ease-in-out;
+        margin-right: 2rem;
+
+        &.close-button {
+            cursor: pointer;
+            position: absolute;
+            right: 0.5rem;
+
+            &:hover {
+                transform: scale(1.5);
+                transition: transform 0.3s ease-in-out;
+            }
         }
     }
 }
@@ -70,6 +75,7 @@ h3 {
         .card-image {
             height: 100%;
             background: white;
+
             img {
                 height: 16rem;
                 width: 16rem;
@@ -102,6 +108,7 @@ h3 {
 
                 .skill-item {
                     font-size: 5rem;
+
                     i:hover {
                         transform: scale(1.5);
                         transition: transform 0.3s ease-in-out;

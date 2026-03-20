@@ -5,7 +5,7 @@
             <div class="col l6 left-column-container">
                 <div class="left-column">
                     @if ($index !== 0 && $index % 2 !== 0) {
-                    <h3  [ngStyle]="{'text-shadow': '2px 2px 4px ' + item.barColor}">{{ item.title }}</h3>
+                    <h3  [ngStyle]="{'color': item.barColor}">{{ item.title }}</h3>
                     <div class="left-column-line" [ngStyle]="{'border-color': item.barColor}"></div>
                     <div class="timeline-image"  [ngStyle]="{'background-color': item.barColor}" (click)="onViewDetails(item)">
                         <i [ngClass]="item.iconClass" class="timeline-icon"></i>
@@ -29,7 +29,7 @@
                         <i [ngClass]="item.iconClass" class="timeline-icon" ></i>
                         <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-up"></i></span>
                     </div>
-                    <h3 [ngStyle]="{'text-shadow': '2px 2px 4px ' + item.barColor}">{{ item.title }}</h3>
+                    <h3 [ngStyle]="{'color': item.barColor}">{{ item.title }}</h3>
                     } @else{
                     <p>
                         {{ item.description }}
