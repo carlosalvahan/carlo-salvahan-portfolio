@@ -1,0 +1,42 @@
+$text-shadow: #424242 2px 2px 4px;
+
+.full-screen-container {
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .header-container {
+        color: #ffd180;
+        text-shadow: $text-shadow;
+        text-align: center;
+        margin-top: 5rem;
+        position: sticky;
+    }
+
+    .skill-container {
+        display: flex;
+        margin: 5rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+
+        .skill-item {
+            background: white;
+            width: 15rem;
+            height: 15rem;
+        }
+
+        i {
+            font-size: 5rem;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.5);
+                transition: transform 0.3s ease-in-out;
+                ;
+            }
+        }
+    }
+}
