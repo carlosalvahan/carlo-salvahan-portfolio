@@ -6,6 +6,7 @@
   gap: 1rem;
   position: relative;
   z-index: 1;
+  animation: fadeIn 1s ease-out;
 
   .page-header {
     flex: 0 0 15rem;
@@ -18,9 +19,6 @@
     font-weight: 700;
     position: relative;
     z-index: 1;
-    i {
-        // color: #ffab00;
-    }
   }
 
   .page-content {
@@ -28,20 +26,14 @@
     overflow-y: auto;
     position: relative;
     z-index: 1;
-    
-    app-timeline {
-      animation: slideContentRight 0.5s ease-out;
-    }
   }
 }
 
-@keyframes slideContentRight {
+@keyframes fadeIn {
   from {
-    transform: translateX(-100vw);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
     opacity: 1;
   }
 }

@@ -2,41 +2,131 @@ $text-shadow: #424242 2px 2px 4px;
 
 .full-screen-container {
     height: 100vh;
-    background: black;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    background: black;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
 
-    .header-container {
-        color: #ffd180;
-        text-shadow: $text-shadow;
-        text-align: center;
-        margin-top: 5rem;
-        position: sticky;
-    }
+    .skill-header {
+        flex: 0 0 15rem;
 
-    .skill-container {
-        display: flex;
-        margin: 5rem;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-
-        .skill-item {
-            background: white;
-            width: 15rem;
-            height: 15rem;
+        .header-container {
+            color: #ffd180;
+            text-shadow: $text-shadow;
+            text-align: center;
+            margin-top: 5rem;
         }
 
-        i {
-            font-size: 5rem;
+        .skill-container {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            height: 10rem;
+            padding: 0 2rem;
 
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.5);
-                transition: transform 0.3s ease-in-out;
-                ;
+            .skill-item {
+                background: white;
+                width: 15rem;
+                height: 15rem;
+                flex: 0 0 auto;
+            }
+
+            i {
+                font-size: 5rem;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.5);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                &.active {
+                    transform: scale(2);
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+        }
+
+        .skill-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .skill-container::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+    }
+
+    .skill-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .skill-desc-container {
+            background: white;
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            margin: 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+
+            .skill-desc-header {
+                display: flex;
+                flex: 1;
+
+                .skill-image,
+                .skill-desc-details-container {
+                    background: white;
+                    width: 15rem;
+                    height: 15rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .desc-image {
+                        font-size: 14rem;
+                        height: 15rem;
+                        width: 15rem;
+                        padding: 0.5rem;
+                    }
+                }
+
+                .skill-desc-details-container {
+                    width: auto;
+                    flex: 1 1 auto;
+                    margin-left: 1rem;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .skill-desc-details {
+                        padding: 0 2rem;
+                    }
+                }
+            }
+
+            .skill-desc-content {
+                flex: 1;
+                border: 1px solid #212121;
+                background: white;
+                margin-top: 1rem;
             }
         }
     }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

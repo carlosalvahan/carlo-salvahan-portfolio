@@ -1,10 +1,28 @@
 <div class="full-screen-container">
-    <div class="header-container">
-        <h3>Skills and Expertise</h3>
+    <div class="skill-header">
+        <div class="header-container">
+            <h3>Skills and Expertise <i class="fa-solid fa-code"></i></h3>
+        </div>
+        <div class="skill-container">
+            @for (skill of skillSet; track $index) {
+            <i [ngClass]="[skill.icon, skill.name === selectedSkill.name ? 'active' : '']" [ngStyle]="{'color': skill.color}" (click)="onSkillSelect(skill.name)"></i>
+            }
+        </div>
     </div>
-    <div class="skill-container">
-        @for (skill of skillSet; track $index) {
-            <i [ngClass]="skill.icon" [ngStyle]="{'color': skill.color}"></i>
-        }
+    <div class="skill-content">
+        <div class="skill-desc-container">
+            <div class="skill-desc-header">
+                <div class="skill-image">
+                    <i [ngClass]="selectedSkill.icon" class="desc-image" [ngStyle]="{'color': selectedSkill.color}"></i>
+                </div>
+                <div class="skill-desc-details-container">
+                   <div class="skill-desc-details">
+                     <h3>{{selectedSkill.name}}</h3>
+                   </div>
+                </div>
+            </div>
+            <div class="skill-desc-content">
+            </div>
+        </div>
     </div>
 </div>
