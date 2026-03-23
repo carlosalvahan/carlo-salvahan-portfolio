@@ -10,6 +10,9 @@ $text-shadow: #424242 2px 2px 4px;
 
     .skill-header {
         flex: 0 0 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .header-container {
             color: #ffd180;
@@ -20,15 +23,15 @@ $text-shadow: #424242 2px 2px 4px;
 
         .skill-container {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
             padding: 1rem;
-            justify-content: center;
             align-items: center;
             height: 10rem;
             padding: 0 2rem;
+            width: 80%;
 
             .skill-item {
                 background: white;
@@ -80,21 +83,21 @@ $text-shadow: #424242 2px 2px 4px;
 
             .skill-desc-header {
                 display: flex;
-                flex: 1;
+                
 
                 .skill-image,
                 .skill-desc-details-container {
                     background: white;
-                    width: 15rem;
-                    height: 15rem;
+                    width: 10rem;
+                    height: 10rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
                     .desc-image {
-                        font-size: 14rem;
-                        height: 15rem;
-                        width: 15rem;
+                        font-size: 9rem;
+                        height: 9rem;
+                        width: 9rem;
                         padding: 0.5rem;
                     }
                 }
@@ -103,11 +106,20 @@ $text-shadow: #424242 2px 2px 4px;
                     width: auto;
                     flex: 1 1 auto;
                     margin-left: 1rem;
+                    height: 10rem;
+                    overflow-y: auto;
                     justify-content: flex-start;
                     flex-direction: column;
                     align-items: flex-start;
                     .skill-desc-details {
                         padding: 0 2rem;
+                        padding-top: 1.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        h3 {
+                            margin: 0;
+                        }
                     }
                 }
             }
@@ -117,6 +129,8 @@ $text-shadow: #424242 2px 2px 4px;
                 border: 1px solid #212121;
                 background: white;
                 margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
             }
         }
     }

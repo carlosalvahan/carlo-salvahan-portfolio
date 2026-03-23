@@ -15,9 +15,24 @@ export class SkillsPageComponent {
     }
   });
   selectedSkill: any = this.skillSet[0];
+  starFilled: number = 0;
+  starUnfilled: number = 5;
+
 
   onSkillSelect(skillName: string) {
     this.selectedSkill = this.skillSet.find(skill => skill.name === skillName);
-    console.log(this.selectedSkill);
+  }
+
+  createStarDisplay(mastery: number) {
+    this.selectedSkill.mastery
+  }
+
+  isHalfStep(num: number) {
+    return num % 1 === 0.5;
+  }
+
+  getArray(count: number): number[] {
+    console.log(Math.floor(count));
+    return Array(Math.floor(count)).fill(0);
   }
 }

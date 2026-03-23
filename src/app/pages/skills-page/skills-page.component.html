@@ -17,11 +17,26 @@
                 </div>
                 <div class="skill-desc-details-container">
                    <div class="skill-desc-details">
-                     <h3>{{selectedSkill.name}}</h3>
+                     <p>{{selectedSkill.description}}</p>
                    </div>
                 </div>
             </div>
             <div class="skill-desc-content">
+                <div>Mastery: 
+                    @for(item of getArray(selectedSkill.mastery); track $index) {
+                        <i class="fa-solid fa-star" style="color: #F7DF1E"></i>
+                    }
+                    @if(selectedSkill.mastery < 5) {
+                        @for(noStar of getArray(5 - selectedSkill.mastery); track $index) {
+                            @if(isHalfStep(this.selectedSkill.mastery) && $index === 0) {
+                                <i class="fa-solid fa-star-half-stroke" style="color: #F7DF1E"></i>
+                            } @else {
+                                <i class="fa-regular fa-star" style="color: #F7DF1E"></i>
+                            }
+                        }
+                    }
+                </div>
+                <div>Projects: {{selectedSkill.projectsDone}}</div>
             </div>
         </div>
     </div>
