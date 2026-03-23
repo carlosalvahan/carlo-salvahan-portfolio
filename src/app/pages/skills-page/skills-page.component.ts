@@ -34,4 +34,8 @@ export class SkillsPageComponent {
   getArray(count: number): number[] {
     return Array(Math.floor(count)).fill(0);
   }
+
+  projectArray() {
+    return this.selectedSkill.projectsDone.split(',');
+  }
 }

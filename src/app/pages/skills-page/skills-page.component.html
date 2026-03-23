@@ -3,40 +3,55 @@
         <div class="header-container">
             <h3>Skills and Expertise <i class="fa-solid fa-code"></i></h3>
         </div>
-        <div class="skill-container">
-            @for (skill of skillSet; track $index) {
-            <i [ngClass]="[skill.icon, skill.name === selectedSkill.name ? 'active' : '']" [ngStyle]="{'color': skill.color}" (click)="onSkillSelect(skill.name)"></i>
-            }
-        </div>
     </div>
     <div class="skill-content">
+        <div class="skill-container">
+            @for (skill of skillSet; track $index) {
+            <i [ngClass]="[skill.icon, skill.name === selectedSkill.name ? 'active' : '']"
+                [ngStyle]="{'color': skill.color}" (click)="onSkillSelect(skill.name)"></i>
+            }
+        </div>
         <div class="skill-desc-container">
             <div class="skill-desc-header">
                 <div class="skill-image">
                     <i [ngClass]="selectedSkill.icon" class="desc-image" [ngStyle]="{'color': selectedSkill.color}"></i>
                 </div>
                 <div class="skill-desc-details-container">
-                   <div class="skill-desc-details">
-                     <p>{{selectedSkill.description}}</p>
-                   </div>
+                    <div class="skill-desc-details">
+                        <p>{{selectedSkill.description}}</p>
+                    </div>
                 </div>
             </div>
             <div class="skill-desc-content">
-                <div>Mastery: 
+                <div class="mastery-div">
+                    <span class="span-header">
+                        Mastery:
+                    </span>
                     @for(item of getArray(selectedSkill.mastery); track $index) {
-                        <i class="fa-solid fa-star" style="color: #F7DF1E"></i>
+                    <i class="fa-solid fa-star" style="color: #F7DF1E"></i>
                     }
-                    @if(selectedSkill.mastery < 5) {
-                        @for(noStar of getArray(5 - selectedSkill.mastery + (isHalfStep(this.selectedSkill.mastery) ? 0.5 : 0)); track $index) {
-                            @if(isHalfStep(this.selectedSkill.mastery) && $index === 0) {
-                                <i class="fa-solid fa-star-half-stroke" style="color: #F7DF1E"></i>
-                            } @else {
+                    @if(selectedSkill.mastery < 5) { 
+                        @for(noStar of getArray(5 - selectedSkill.mastery +
+                            (isHalfStep(selectedSkill.mastery) ? 0.5 : 0)); track $index) {
+                                @if(isHalfStep(selectedSkill.mastery) && $index===0) { <i class="fa-solid fa-star-half-stroke"
+                                style="color: #F7DF1E"></i>
+                                } @else {
                                 <i class="fa-regular fa-star" style="color: #F7DF1E"></i>
                             }
                         }
                     }
+                    <span class="mastery-num">{{ selectedSkill.mastery + (isHalfStep(selectedSkill.mastery) ? '': '.0')}}</span>
                 </div>
-                <div>Projects: {{selectedSkill.projectsDone}}</div>
+                <div>
+                    <span class="span-header">
+                        Projects:
+                    </span>
+                    <ul class="collection project-list">
+                        @for(project of projectArray();track $index) {
+                        <li class="collection-item">{{project}}</li>
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
