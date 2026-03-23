@@ -27,7 +27,7 @@
                         <i class="fa-solid fa-star" style="color: #F7DF1E"></i>
                     }
                     @if(selectedSkill.mastery < 5) {
-                        @for(noStar of getArray(5 - selectedSkill.mastery); track $index) {
+                        @for(noStar of getArray(5 - selectedSkill.mastery + (isHalfStep(this.selectedSkill.mastery) ? 0.5 : 0)); track $index) {
                             @if(isHalfStep(this.selectedSkill.mastery) && $index === 0) {
                                 <i class="fa-solid fa-star-half-stroke" style="color: #F7DF1E"></i>
                             } @else {

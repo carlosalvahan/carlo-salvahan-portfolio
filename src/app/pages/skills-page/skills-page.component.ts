@@ -32,7 +32,6 @@ export class SkillsPageComponent {
   }
 
   getArray(count: number): number[] {
-    console.log(Math.floor(count));
     return Array(Math.floor(count)).fill(0);
   }
 }
