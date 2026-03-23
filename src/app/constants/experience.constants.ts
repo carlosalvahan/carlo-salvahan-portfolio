@@ -56,11 +56,11 @@ const ExperienceDetailsConstants = {
 }
 
 const ExperienceSkillsConstants = {
-  '2016': ['C++', 'Java', 'MySQL', 'HTML', 'CSS', 'VueJS', 'Angular', 'Bootstrap'],
-  '2018': ['Angular', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap'],
-  '2020': ['Angular','HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap'],
-  '2021': ['Angular', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap'],
-  'Present': ['ReactJS', 'JavaScript', 'HTML', 'CSS']
+  '2016': ['C++', 'Java', 'MySQL', 'HTML5', 'CSS3', 'VueJS', 'Angular', 'Bootstrap'],
+  '2018': ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Materialize'],
+  '2020': ['Angular','HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Bootstrap'],
+  '2021': ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Bootstrap'],
+  'Present': ['ReactJS', 'JavaScript', 'HTML5', 'CSS3']
 }
 
 export { ExperienceDescriptionConstants, ExperienceDetailsConstants, ExperienceSkillsConstants };

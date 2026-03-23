@@ -68,7 +68,15 @@ const SkillsConstants = {
         color: '#563d7c',
         description: 'Bootstrap is a popular open-source front-end framework that enables developers to build responsive, mobile-first, and visually consistent web applications efficiently. It provides a comprehensive collection of pre-designed CSS and JavaScript components, such as grids, buttons, forms, and navigation elements, which streamline development and ensure cross-browser compatibility. By leveraging Bootstrap, developers can accelerate UI design, maintain uniform styling, and deliver professional-quality interfaces with minimal effort.',
         mastery: 4.5,
-        projectsDone: 'Smart ID Migration, Tax advisory, Property Tax Management',
+        projectsDone: 'Smart ID Migration, Insurance Advisory,Tax advisory, Property Tax Management',
+        expDesc: ''
+    },
+    'Materialize': {
+        icon: 'fa-solid fa-m',
+        color: '#EB7077',
+        description: 'Materialize is a modern front-end framework based on Google’s Material Design principles, designed to help developers build responsive, mobile-first, and visually consistent web applications. It provides a rich set of prebuilt CSS and JavaScript components—such as grids, forms, buttons, modals, and navigation elements—enabling rapid UI development with a professional look and feel. By leveraging Materialize, developers can ensure cross-browser compatibility, streamline design workflows, and deliver intuitive and engaging user experiences.',
+        mastery: 2,
+        projectsDone: 'Airline flight booking, Airline Call Center application, Airline E-commerce',
         expDesc: ''
     },
     'VueJS': {
