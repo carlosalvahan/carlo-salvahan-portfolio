@@ -1,18 +1,85 @@
 .intro-container {
-    background-image: url("/assets/developer-background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #e1f5fe;
 
-    h1,
-    p {
-        text-shadow: 2px 2px 4px #424242
+    .intro-header {
+        color: white;
+        font-size: 2rem;
+        font-style: italic;
+        background-color: black;
+        text-shadow: 2px 2px 1px #212121;
+        padding: 5rem;
+        flex: 0 0 auto;
+        margin-top: 8rem;
     }
 
-    .row {
-        text-align: center;
+    .intro-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        overflow-y: auto;
+        gap: 2rem;
+        padding: 5rem;
+        flex-wrap: wrap;
+
+        .skill-highlights, .project-highlights {
+            border: 1px solid #e0e0e0;
+            box-shadow: 4px 4px 4px #bdbdbd;
+            flex: 1;
+            height: 20rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            .box-header {
+                padding: 1rem;
+                color: #616161;
+                font-size: 2rem;
+                padding-left: 2rem;
+                text-shadow: 1px 1px 1px #212121;
+                font-weight: 500;
+            }
+            .view-more-button {
+                position: absolute;
+                bottom: 0.5rem;
+                right: 0.5rem;
+            }
+
+            .skill-display {
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+                .skill-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        font-size: 10rem;
+                        text-shadow: 1px 1px 1px #212121;
+                    }
+                }
+            }
+
+            .project-display {
+                display: flex;
+                gap: 3rem;
+                justify-content: center;
+                .project-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        font-size: 9rem;
+                        margin-bottom: 1rem;
+                        text-shadow: 1px 1px 1px #212121;
+                    }
+                }
+            }
+        }
     }
 }
