@@ -1,84 +1,148 @@
+$content-header-font-size: 1.5rem;
+$content-header-font-weight: 500;
+$content-header-text-shadow: 2px 2px 2px #eeeeee;
+$content-header-color: #424242;
+
 .intro-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    overflow-y: auto;
+    height: 100vh;
     background-color: #e1f5fe;
+    position: relative;
+
+    .company-images {
+        display: flex;
+        gap: 3rem;
+        align-items: flex-end;
+        margin-top: 1rem;
+        padding-left: 5rem;
+        align-items: center;
+        background-color: white;
+        flex-wrap: wrap;
+        width: 100%;
+        border-top: 2px solid #84ffff ;
+
+        i {
+            font-size: 4rem;
+            color: #ffb300;
+            text-shadow: $content-header-text-shadow;
+        }
+
+        img {
+            height: 6rem;
+            background: white;
+            padding: 1rem;
+        }
+    }
 
     .intro-header {
         color: white;
+        background-color: black;
         font-size: 2rem;
         font-style: italic;
-        background-color: black;
         text-shadow: 2px 2px 1px #212121;
+        border: 1px solid black;
         padding: 5rem;
+        height: 20rem;
+        display: flex;
+        align-items: center;
         flex: 0 0 auto;
-        margin-top: 8rem;
+        border-bottom: 3px solid #84ffff ;
     }
 
     .intro-content {
         flex: 1;
         display: flex;
-        justify-content: center;
         align-items: baseline;
         overflow-y: auto;
-        gap: 2rem;
+        gap: 4rem;
         padding: 5rem;
-        flex-wrap: wrap;
+        color: white;
+        flex-direction: column;
 
-        .skill-highlights, .project-highlights {
-            border: 1px solid #e0e0e0;
-            box-shadow: 4px 4px 4px #bdbdbd;
-            flex: 1;
-            height: 20rem;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            .box-header {
-                padding: 1rem;
-                color: #616161;
-                font-size: 2rem;
-                padding-left: 2rem;
-                text-shadow: 1px 1px 1px #212121;
-                font-weight: 500;
-            }
-            .view-more-button {
-                position: absolute;
-                bottom: 0.5rem;
-                right: 0.5rem;
+        .expertise-section {
+            .expertise-header {
+                font-size: $content-header-font-size;
+                font-weight: $content-header-font-weight;
+                text-shadow: $content-header-text-shadow;
+                color: $content-header-color;
             }
 
-            .skill-display {
+            .expertise-badges {
                 display: flex;
-                gap: 2rem;
-                justify-content: center;
-                .skill-item {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    i {
-                        font-size: 10rem;
-                        text-shadow: 1px 1px 1px #212121;
+                margin-top: 1rem;
+                gap: 1rem;
+                
+                span {
+                    color: white;
+                    padding: 1rem;
+                    border: 1px solid #616161;
+                    border-radius: 1rem;
+                    text-shadow: 2px 2px 2px #424242;
+                    transition: transform 0.3s ease;
+                    box-shadow: 2px 2px 2px #9e9e9e;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        cursor: pointer;
                     }
                 }
             }
+        }
 
-            .project-display {
+        .projects-section {
+            .project-header {
+                font-size: $content-header-font-size;
+                font-weight: $content-header-font-weight;
+                text-shadow: $content-header-text-shadow;
+                color: $content-header-color;
+            }
+
+            .project-grid {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 3rem;
-                justify-content: center;
+                margin-top: 2rem;
+
                 .project-item {
+                    height: 10rem;
+                    width: 10rem;
+                    // border: 1px solid #00e5ff;
+                    border: 1px solid #bdbdbd;
+                    border-radius: 1rem;
+                    background: white;
+                    color: #424242;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
+                    text-align: center;
+                    padding: 1.5rem;
+                    transition: transform 0.3s ease;
+                    text-shadow: 1px 1px 1px #eeeeee;
+                    font-weight: 700;
+                    box-shadow: 3px 3px 2px #9e9e9e;
+
                     i {
-                        font-size: 9rem;
+                        font-size: 4rem;
                         margin-bottom: 1rem;
                         text-shadow: 1px 1px 1px #212121;
                     }
+
+                    &:hover {
+                        transform: scale(1.2);
+                        cursor: pointer;
+                    }
                 }
+            }
+        }
+
+        .project-header,
+        .expertise-header {
+            i {
+                margin-left: 1rem;
+                font-size: 3rem;
+                text-shadow: 1px 1px 1px #212121;
             }
         }
     }
