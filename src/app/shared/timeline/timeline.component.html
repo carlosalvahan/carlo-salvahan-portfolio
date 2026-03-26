@@ -1,8 +1,8 @@
 <div class="full-page-container">
-    <div class="container">
+    <div class="timeline-container">
         @for (item of timelineItems(); track $index) {
-        <div class="row">
-            <div class="col l6 left-column-container">
+        <div class="timeline-row">
+            <div class="timeline-col left-column-container">
                 <div class="left-column">
                     @if ($index !== 0 && $index % 2 !== 0) {
                     <h3  [ngStyle]="{'color': item.barColor}">{{ item.title }}</h3>
@@ -19,7 +19,7 @@
                     }
                 </div>
             </div>
-            <div class="col l6 right-column-container">
+            <div class="timeline-col right-column-container">
                 <div class="right-column">
                     @if ($index === 0 || $index % 2 === 0) {
                     <div class="right-column-line" [ngStyle]="{'border-color': item.barColor}"></div>

@@ -1,11 +1,11 @@
 <div class="page-container">
-  <div class="row">
-    <div class="col l2 grey darken-4 nav-col">
+  <div class="app-row">
+    <div class="app-sidebar">
       <app-image [imageSrc]="'kaneki.png'" [imageText]="'Carlo Salvahan'"
         [imageSubText]="'Frontend Developer'"></app-image>
       <app-nav-bar [navBarItems]="navBarItems"></app-nav-bar>
     </div>
-    <div class="col l10">
+    <div class="app-content">
       <router-outlet />
     </div>
   </div>

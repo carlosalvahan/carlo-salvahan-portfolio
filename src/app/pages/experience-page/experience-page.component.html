@@ -1,11 +1,14 @@
-<div class="experience-page-container">
-    <div class="page-header">
-        <h3>EXPERIENCE TIMELINE <i class="fa-solid fa-clock"></i></h3>
+<div class="super-container">
+    <div class="experience-page-container">
+        <div class="page-header">
+            <h3>EXPERIENCE TIMELINE <i class="fa-solid fa-clock"></i></h3>
+        </div>
+        <div class="page-content">
+            <app-timeline [timelineItems]="experienceItems" (viewDetailsClick)="onViewDetails($event)"></app-timeline>
+        </div>
+        @if(detailSelected) {
+        <app-experience-detail-page [detailItem]="detailSelected"
+            (backClick)="onBackClick()"></app-experience-detail-page>
+        }
     </div>
-    <div class="page-content">
-        <app-timeline [timelineItems]="experienceItems" (viewDetailsClick)="onViewDetails($event)"></app-timeline>
-    </div>
-     @if(detailSelected) {
-        <app-experience-detail-page [detailItem]="detailSelected" (backClick)="onBackClick()"></app-experience-detail-page>
-    }
 </div>

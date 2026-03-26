@@ -109,8 +109,15 @@ h3 {
 }
 
 p {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     color: #212121;
+}
+
+.timeline-row {
+    display:flex;
+    .timeline-col {
+        flex: 1;
+    }
 }
 

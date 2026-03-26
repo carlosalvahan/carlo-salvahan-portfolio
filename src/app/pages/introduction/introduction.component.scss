@@ -11,30 +11,6 @@ $content-header-color: #424242;
     background-color: #e1f5fe;
     position: relative;
 
-    .company-images {
-        display: flex;
-        gap: 3rem;
-        align-items: flex-end;
-        margin-top: 1rem;
-        padding-left: 5rem;
-        align-items: center;
-        background-color: white;
-        flex-wrap: wrap;
-        width: 100%;
-        border-top: 2px solid #84ffff ;
-
-        i {
-            font-size: 4rem;
-            color: #ffb300;
-            text-shadow: $content-header-text-shadow;
-        }
-
-        img {
-            height: 6rem;
-            background: white;
-            padding: 1rem;
-        }
-    }
 
     .intro-header {
         color: white;
@@ -48,7 +24,7 @@ $content-header-color: #424242;
         display: flex;
         align-items: center;
         flex: 0 0 auto;
-        border-bottom: 3px solid #84ffff ;
+        border-bottom: 3px solid #84ffff;
     }
 
     .intro-content {
@@ -60,6 +36,41 @@ $content-header-color: #424242;
         padding: 5rem;
         color: white;
         flex-direction: column;
+
+        .career-section {
+            .career-header {
+                font-size: $content-header-font-size;
+                font-weight: $content-header-font-weight;
+                text-shadow: $content-header-text-shadow;
+                color: $content-header-color;
+            }
+
+            .company-images {
+                display: flex;
+                gap: 3rem;
+                align-items: flex-end;
+                margin-top: 1rem;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+
+
+                img {
+                    height: 8rem;
+                    width: 8rem;
+                    background: white;
+                    padding: 1.5rem;
+                    border-radius: 50%;
+                    object-fit: contain;
+                    transition: transform 0.3s ease;
+                    box-shadow: 2px 2px 2px #9e9e9e;
+                    &:hover {
+                        transform: scale(1.2);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
 
         .expertise-section {
             .expertise-header {
@@ -73,13 +84,14 @@ $content-header-color: #424242;
                 display: flex;
                 margin-top: 1rem;
                 gap: 1rem;
-                
+
                 span {
+                    background-color: #616161;
                     color: white;
                     padding: 1rem;
                     border: 1px solid #616161;
                     border-radius: 1rem;
-                    text-shadow: 2px 2px 2px #424242;
+                    text-shadow: 2px 2px 2px #212121;
                     transition: transform 0.3s ease;
                     box-shadow: 2px 2px 2px #9e9e9e;
 
@@ -108,7 +120,6 @@ $content-header-color: #424242;
                 .project-item {
                     height: 10rem;
                     width: 10rem;
-                    // border: 1px solid #00e5ff;
                     border: 1px solid #bdbdbd;
                     border-radius: 1rem;
                     background: white;
@@ -138,10 +149,11 @@ $content-header-color: #424242;
         }
 
         .project-header,
-        .expertise-header {
+        .expertise-header,
+        .career-header {
             i {
-                margin-left: 1rem;
-                font-size: 3rem;
+                margin-right: 1rem;
+                font-size: 2rem;
                 text-shadow: 1px 1px 1px #212121;
             }
         }

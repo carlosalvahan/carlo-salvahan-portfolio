@@ -1,18 +1,19 @@
 .page-container {
     display: flex;
     min-height: 100vh;
-}
 
-.row {
-    width: 100%;
-    margin-bottom: 0;
-}
+    .app-row {
+        display: flex;
 
-.col {
-    height: 100%;
-    padding: 0;
-}
+        .app-sidebar {
+            flex: 0 0 20rem;
+            background-color: #212121;
+            overflow-y: auto;
+            height: 100%;
+        }
 
-.nav-col {
-    padding-top: 2rem;
+        .app-content {
+            flex: 1;
+        }
+    }
 }
