@@ -10,17 +10,16 @@
     position: relative;
     z-index: 1;
     animation: fadeIn 1s ease-out;
-    background-color: #e1f5fe;
     flex: 1;
 
     .page-header {
       flex: 0 0 15rem;
-      background: #263238;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
       text-shadow: 2px 2px #616161;
+      border-bottom: 1px solid #616161;
       font-weight: 700;
       position: relative;
       z-index: 1;

@@ -1,30 +1,29 @@
-$content-header-font-size: 1.5rem;
+$content-header-font-size: 2.5rem;
 $content-header-font-weight: 500;
-$content-header-text-shadow: 2px 2px 2px #eeeeee;
-$content-header-color: #424242;
+$content-header-text-shadow: none;
+$content-header-color: white;
 
 .intro-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     overflow-y: auto;
     height: 100vh;
-    background-color: #e1f5fe;
-    position: relative;
 
 
     .intro-header {
         color: white;
-        background-color: #263238;
         font-size: 2.5rem;
         font-style: italic;
         text-shadow: 2px 2px 1px #212121;
         padding: 5rem;
-        height: 30rem;
+        height: 20rem;
         display: flex;
         align-items: center;
         flex: 0 0 auto;
-        border-bottom: 3px solid #84ffff;
+        border-bottom: 3px solid #616161;
         position: relative;
+
         .button {
             position: absolute;
             right: 1rem;
@@ -37,6 +36,7 @@ $content-header-color: #424242;
             font-size: 1rem;
             cursor: pointer;
             transition: transform 0.3s ease;
+
             &:hover {
                 background: #212121;
                 transform: scale(1.2);
@@ -77,10 +77,11 @@ $content-header-color: #424242;
                     width: 8rem;
                     background: white;
                     padding: 1.5rem;
-                    border-radius: 50%;
+                    border-radius: 25%;
                     object-fit: contain;
                     transition: transform 0.3s ease;
                     box-shadow: 2px 2px 2px #9e9e9e;
+
                     &:hover {
                         transform: scale(1.2);
                         cursor: pointer;
@@ -90,6 +91,8 @@ $content-header-color: #424242;
         }
 
         .expertise-section {
+            width: 100%;
+
             .expertise-header {
                 font-size: $content-header-font-size;
                 font-weight: $content-header-font-weight;
@@ -101,16 +104,17 @@ $content-header-color: #424242;
                 display: flex;
                 margin-top: 1rem;
                 gap: 1rem;
+                justify-content: center;
 
                 span {
-                    background-color: #616161;
+                    background-color: black;
                     color: white;
-                    padding: 1rem;
+                    padding: 1rem 2rem;
                     border: 1px solid #616161;
                     border-radius: 1rem;
                     text-shadow: 2px 2px 2px #212121;
                     transition: transform 0.3s ease;
-                    box-shadow: 2px 2px 2px #9e9e9e;
+                    font-size: 2vh;
 
                     &:hover {
                         transform: scale(1.2);
@@ -121,6 +125,8 @@ $content-header-color: #424242;
         }
 
         .projects-section {
+            width: 100%;
+
             .project-header {
                 font-size: $content-header-font-size;
                 font-weight: $content-header-font-weight;
@@ -133,34 +139,59 @@ $content-header-color: #424242;
                 flex-wrap: wrap;
                 gap: 3rem;
                 margin-top: 2rem;
+                justify-content: center;
 
                 .project-item {
-                    height: 10rem;
-                    width: 10rem;
+                    flex: 1;
+                    aspect-ratio: 1 / 0.5;
                     border: 1px solid #bdbdbd;
                     border-radius: 1rem;
-                    background: white;
-                    color: #424242;
+                    background: #191E29;
+                    color: white;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
                     padding: 1.5rem;
                     transition: transform 0.3s ease;
-                    text-shadow: 1px 1px 1px #eeeeee;
-                    font-weight: 700;
-                    box-shadow: 3px 3px 2px #9e9e9e;
 
-                    i {
-                        font-size: 4rem;
-                        margin-bottom: 1rem;
-                        text-shadow: 1px 1px 1px #212121;
+                    .project-title {
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        margin: 1rem 0;
                     }
 
-                    &:hover {
-                        transform: scale(1.2);
+                    .project-details-button {
+                        margin-top: 1rem;
+                        padding: 1rem 2rem;
+                        background-color: #1F3C81;
+                        color: white;
                         cursor: pointer;
+                        border-radius: 1rem;
+                        border: 1px solid transparent;
+                        font-weight: 700;
+                        transition: all 0.25s ease;
+
+                        &:hover {
+                            background-color: #2a4fb0;
+                            transform: translateY(-2px);
+                            box-shadow: 0 6px 15px rgba(31, 60, 129, 0.4);
+                        }
                     }
+
+                    .icon-container {
+                        border: 1px solid #424242;
+                        padding: 1.5rem 2rem;
+                        border-radius: 1rem;
+
+                        i {
+                            font-size: 5vw;
+                            margin-bottom: 1rem;
+                            color: #616161;
+                            text-shadow: 1px 1px 1px #212121;
+                        }
+                    }
+
                 }
             }
         }
@@ -169,10 +200,17 @@ $content-header-color: #424242;
         .expertise-header,
         .career-header {
             i {
-                margin-right: 1rem;
+                margin-left: 1rem;
                 font-size: 2rem;
                 text-shadow: 1px 1px 1px #212121;
             }
+        }
+
+        .project-subtitle,
+        .expertise-subtitle,
+        .career-subtitle {
+            margin-top: 0.5rem;
+            font-size: 1.5rem;
         }
     }
 }

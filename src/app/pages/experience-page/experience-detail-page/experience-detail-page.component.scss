@@ -10,7 +10,13 @@ $text-shadow: #424242 2px 2px 4px;
     z-index: 3;
     position: absolute;
     top: 0;
-    background: #424224;
+    background: radial-gradient(circle at 20% 30%,
+            rgba(59, 130, 246, 0.25),
+            transparent 40%),
+        radial-gradient(circle at 80% 70%,
+            rgba(139, 92, 246, 0.2),
+            transparent 40%),
+        linear-gradient(135deg, #0f172a, #020617);
 
     &.closing {
         animation: slideContentDown 1s ease-out forwards;
@@ -50,7 +56,6 @@ h3 {
 }
 
 .details-content {
-    background-color: white;
     flex: 1;
     overflow-y: auto;
 
@@ -71,6 +76,7 @@ h3 {
         border-width: 1px;
         border-style: solid;
         box-shadow: $item-box-shadow;
+        color: #212121;
 
         .card-image {
             height: 100%;
@@ -92,6 +98,8 @@ h3 {
         box-shadow: $item-box-shadow;
         display: flex;
         flex-direction: column;
+        background-color: white;
+        color: #212121;
 
         h3 {
             padding: 1rem;
