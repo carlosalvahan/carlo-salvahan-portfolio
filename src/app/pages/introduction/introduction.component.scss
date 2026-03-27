@@ -42,6 +42,7 @@ $content-header-color: white;
         overflow-y: auto;
         gap: 4rem;
         padding: 5rem;
+        padding-top: 3rem;
         color: white;
         flex-direction: column;
 
@@ -238,7 +239,8 @@ $content-header-color: white;
 
         .project-subtitle,
         .expertise-subtitle,
-        .career-subtitle {
+        .career-subtitle,
+        .about-subtitle {
             margin-top: 0.5rem;
             font-size: 1.5rem;
         }
