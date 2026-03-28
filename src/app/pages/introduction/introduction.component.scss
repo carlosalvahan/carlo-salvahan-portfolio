@@ -7,7 +7,6 @@ $content-header-color: white;
     display: flex;
     flex: 1;
     flex-direction: column;
-    overflow-y: auto;
     height: 100vh;
 
 
@@ -265,12 +264,12 @@ $content-header-color: white;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: end;
                     text-align: center;
                     padding: 1.5rem;
                     opacity: 0;
                     transform: translateY(50px);
                     transition: all 1s ease-out;
-
                     &.show {
                         opacity: 1;
                         transform: translateY(0);
