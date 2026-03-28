@@ -2,6 +2,11 @@
     display: flex;
     min-height: 100vh;
 
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .app-row {
         display: flex;
         flex: 1;
@@ -28,3 +33,4 @@
         }
     }
 }
+
