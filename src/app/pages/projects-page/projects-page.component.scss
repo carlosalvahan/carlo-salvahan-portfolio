@@ -1,0 +1,92 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+
+    .projects-header {
+        display: flex;
+        flex: 0 0 10rem;
+        align-items: center;
+        padding: 5rem;
+        font-size: 2rem;
+    }
+
+    .projects-content {
+        display: flex;
+        flex: 0 0 auto;
+        padding: 2rem;
+        flex-wrap: wrap;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+
+        .project-item {
+            display: flex;
+            width: 30%;
+            aspect-ratio: 1/0.75;
+            border: 1px solid #bdbdbd;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #1A1A1A 0%, #2B2B2B 50%, #3C3C3C 100%);
+            color: white;
+            padding: 1.5rem;
+
+            .project-details {
+                padding: 1rem;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                overflow: hidden;
+
+                .project-title {
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                }
+
+                .expand-button-container {
+                    position: relative;
+                    right: 0;
+                }
+
+                .skill-pills {
+                    display: flex;
+                    flex: 0 0 auto;
+
+                    .expertise-badges {
+                        display: flex;
+                        flex: 1;
+                        flex-wrap: wrap;
+                        gap: 0.25rem;
+                        margin-top: 1rem;
+                        span {
+                            background: linear-gradient(135deg, #000000 0%, #0D0D0D 40%, #1A1A1A 70%, #262626 100%);
+                            color: white;
+                            border: 1px solid #616161;
+                            border-radius: 1rem;
+                            text-shadow: 2px 2px 2px #212121;
+                            font-size: 1.5vh;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .icon-container {
+                border: 1px solid white;
+                padding: 1.5rem 2rem;
+                border-radius: 1rem;
+                height: fit-content;
+                flex: 0 0 auto;
+
+                i {
+                    font-size: 5vw;
+                    margin-bottom: 1rem;
+                    color: white;
+                    text-shadow: 1px 1px 1px #212121;
+                }
+            }
+
+        }
+    }
+}
