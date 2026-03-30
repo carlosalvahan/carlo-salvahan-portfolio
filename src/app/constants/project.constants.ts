@@ -23,7 +23,7 @@ const ProjectConstants = {
         ],
         icon: 'fa-solid fa-building-columns'
     },
-    'Tax Advisory': {
+    'Tax Advisory Application': {
         company: 'IBM Solutions Inc.',
         position: 'Mid Software Developer',
         skills: ['Angular', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
@@ -47,7 +47,7 @@ const ProjectConstants = {
         ],
         icon: 'fa-solid fa-car-burst'
     },
-    'Airline E-commerce': {
+    'Airline Online Shopping': {
         company: 'Indra Philippines',
         position: 'Mid Software Developer',
         skills: ['Angular', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Materialize'],
@@ -95,7 +95,7 @@ const ProjectConstants = {
         ],
         icon: 'fa-solid fa-id-card'
     },
-    'Timesheet System': {
+    'Employee Timesheet System': {
         company: 'PCCW Solutions',
         position: 'Junior Software Developer',
         skills: [ 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'MySQL', 'Java' ],
