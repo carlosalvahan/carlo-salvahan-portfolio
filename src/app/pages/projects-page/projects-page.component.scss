@@ -15,10 +15,10 @@
     }
 
     .projects-content {
-        display: flex;
-        flex: 0 0 auto;
-        flex-wrap: wrap;
-        gap: 2%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+        gap: 2rem;
+        width: 100%;
         justify-content: center;
 
         .project-item {
@@ -29,10 +29,19 @@
             color: white;
             padding: 1.5rem;
             flex-direction: column;
-            width: 40%;
+            animation: fadeSlide 1s ease-out forwards;
+            opacity: 0;
+
+            .bottom-flex {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                justify-content: end;
+            }
 
             .project-item-row {
                 display: flex;
+
                 .position-display {
                     font-weight: 700;
                     margin-left: 0.5rem;
@@ -116,11 +125,10 @@
                 }
 
 
+
                 &:last-child {
-                    flex: 1;
-                    display: flex;
                     justify-content: end;
-                    align-items: end;
+                    flex: 0 0 auto;
                 }
             }
 
@@ -131,4 +139,17 @@
 :host {
     display: flex;
     flex: 1;
+}
+
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

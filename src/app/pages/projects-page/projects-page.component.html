@@ -2,7 +2,7 @@
     <div class="projects-header">Projects I've Worked On</div>
     <div class="projects-content">
         @for(project of projectList; track $index) {
-        <div class="project-item">
+        <div class="project-item" [ngStyle]="{'animation-delay': `${$index * 0.15}s`}">
             <div class="project-item-row">
                 <div class="icon-container"><i [ngClass]="project.icon"></i></div>
                 <div class="project-details">
@@ -10,24 +10,27 @@
                     <div class="project-subtitle">{{project.details}}</div>
                 </div>
             </div>
-            <div class="project-item-row">
-                <span class="position-display">{{project.position}}</span>
-            </div>
-            <div class="project-item-row">
-                <div class="skill-pills">
-                    <div class="expertise-badges">
-                        @for(projectSkill of project.projectSkillDetail; track $index){
-                            <span>{{projectSkill.name}} <i [ngClass]="projectSkill.icon" [ngStyle]="{'color': projectSkill.color}"></i></span>
-                        }
-                        @if(project.skillDiff > 0) {
+            <div class="bottom-flex">
+                <div class="project-item-row">
+                    <span class="position-display">{{project.position}}</span>
+                </div>
+                <div class="project-item-row">
+                    <div class="skill-pills">
+                        <div class="expertise-badges">
+                            @for(projectSkill of project.projectSkillDetail; track $index){
+                            <span>{{projectSkill.name}} <i [ngClass]="projectSkill.icon"
+                                    [ngStyle]="{'color': projectSkill.color}"></i></span>
+                            }
+                            @if(project.skillDiff > 0) {
                             <span>+{{project.skillDiff}} more </span>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-item-row">
-                <div class="expand-button-container">
-                    <div class="expand-button">View Details</div>
+                <div class="project-item-row">
+                    <div class="expand-button-container">
+                        <div class="expand-button">View Details</div>
+                    </div>
                 </div>
             </div>
         </div>

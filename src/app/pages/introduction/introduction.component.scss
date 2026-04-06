@@ -184,7 +184,7 @@ $content-header-color: white;
                 display: flex;
                 margin-top: 1rem;
                 gap: 1rem;
-                justify-content: center;
+                flex-wrap: wrap;
 
                 span {
                     background: linear-gradient(135deg, #000000 0%, #0D0D0D 40%, #1A1A1A 70%, #262626 100%);
@@ -198,6 +198,7 @@ $content-header-color: white;
                     opacity: 0;
                     transform: translateY(50px);
                     transition: all 1s ease-out;
+                    flex: 0 0 auto;
 
                     &.show {
                         opacity: 1;
