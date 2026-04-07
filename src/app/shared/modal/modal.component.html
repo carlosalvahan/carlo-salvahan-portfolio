@@ -1,0 +1,18 @@
+<div class="modal-container">
+    <div class="modal-backdrop">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">{{modalTitle()}}</h3>
+                <i class="fa-solid fa-xmark" (click)="onCloseClick()"></i>
+            </div>
+            <div class="modal-body">
+                <ng-content></ng-content>
+            </div>
+            @if(hasFooter()) {
+            <div class="modal-footer">
+                footer
+            </div>
+            }
+        </div>
+    </div>
+</div>

@@ -29,7 +29,7 @@
                 </div>
                 <div class="project-item-row">
                     <div class="expand-button-container">
-                        <div class="expand-button">View Details</div>
+                        <div class="expand-button" (click)="openProjectDetails(project)">View Details</div>
                     </div>
                 </div>
             </div>
@@ -37,3 +37,8 @@
         }
     </div>
 </div>
+@if(showModal) {
+    <app-modal (closeClick)="modalClose()" [modalTitle]="selectedProject.name">
+        <app-project-details [selectedProject]="selectedProject"></app-project-details>
+    </app-modal>
+}

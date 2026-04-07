@@ -1,0 +1,35 @@
+<div class="project-details-container">
+    <div class="project-details-header">
+        <div class="card-image">
+            <img class="card-image-src" [src]="selectedProject()?.cmpImage" alt="Kaneko">
+        </div>
+        <div class="detail-header-text">
+            <div>
+                <span class="detail-title">Company: </span> {{selectedProject()?.company}}
+            </div>
+            <div>
+                <span class="detail-title">Position: </span> {{selectedProject()?.position}}
+            </div>
+        </div>
+    </div>
+    <div class="skill-pills">
+        @for(skill of skillList; track $index) { 
+            <span class="skill-pill">{{skill.name}}<i [ngClass]="skill.icon" [ngStyle]="{color: skill.color}"></i></span>
+        }
+    </div>
+    <div class="project-detail-grid">
+        <div class="project-description">
+            <div class="detail-title">Project Description <i class="fa-solid fa-briefcase"
+                    style="color: rgb(99, 230, 190);"></i></div>
+            <p style="white-space: pre-line;">{{selectedProject()?.longDesc}}</p>
+        </div>
+        <div class="key-roles">
+            <div class="detail-title">Key Roles <i class="fa-solid fa-user" style="color: rgb(99, 230, 190);"></i></div>
+            <ul>
+                @for(role of selectedProject()?.keyRoles; track $index) {
+                <li><i class="fa-solid fa-square" style="color: rgb(99, 230, 190);"></i>{{role}}</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

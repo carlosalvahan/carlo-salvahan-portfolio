@@ -149,7 +149,10 @@ $text-shadow: #424242 2px 2px 4px;
 
                 .project-list {
                     margin-top: 1rem;
-                    color: #212121;
+                    color: white;
+                    .collection-item {
+                        background: linear-gradient(135deg, #1A1A1A 0%, #2B2B2B 50%, #3C3C3C 100%);
+                    }
                 }
             }
         }
