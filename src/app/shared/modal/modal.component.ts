@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, OnInit, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,12 +7,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss'
 })
-export class ModalComponent {
+export class ModalComponent implements OnInit {
   closeClick = output();
   hasFooter = input<boolean>(false);
   modalTitle = input<string>('Modal Titles');
+  hideModal: boolean = true;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.hideModal = false;
+    });
+  }
 
   onCloseClick() {
-    this.closeClick.emit()
+    this.hideModal = true;
+    setTimeout(() => {
+      this.closeClick.emit()
+    }, 900);
   }
 }

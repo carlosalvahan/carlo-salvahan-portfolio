@@ -1,6 +1,8 @@
 .super-container {
   display: flex;
   justify-content: center;
+  position: relative;
+  
   .experience-page-container {
     display: flex;
     flex-direction: column;

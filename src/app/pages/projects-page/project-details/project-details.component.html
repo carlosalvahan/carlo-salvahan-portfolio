@@ -5,16 +5,16 @@
         </div>
         <div class="detail-header-text">
             <div>
-                <span class="detail-title">Company: </span> {{selectedProject()?.company}}
+                <span class="detail-title">Company: </span> <span class="detail-header-value">{{selectedProject()?.company}}</span>
             </div>
             <div>
-                <span class="detail-title">Position: </span> {{selectedProject()?.position}}
+                <span class="detail-title">Position: </span>  <span class="detail-header-value">{{selectedProject()?.position}}</span>
             </div>
         </div>
     </div>
     <div class="skill-pills">
         @for(skill of skillList; track $index) { 
-            <span class="skill-pill">{{skill.name}}<i [ngClass]="skill.icon" [ngStyle]="{color: skill.color}"></i></span>
+            <span class="skill-pill" [ngStyle]="{'animation-delay': (1 + (0.3 * $index))+'s'}">{{skill.name}}<i [ngClass]="skill.icon" [ngStyle]="{color: skill.color}"></i></span>
         }
     </div>
     <div class="project-detail-grid">
@@ -27,7 +27,7 @@
             <div class="detail-title">Key Roles <i class="fa-solid fa-user" style="color: rgb(99, 230, 190);"></i></div>
             <ul>
                 @for(role of selectedProject()?.keyRoles; track $index) {
-                <li><i class="fa-solid fa-square" style="color: rgb(99, 230, 190);"></i>{{role}}</li>
+                <li [ngStyle]="{'animation-delay': (2.5 + (0.4 * $index))+'s'}"><i class="fa-solid fa-square" style="color: rgb(99, 230, 190);"></i>{{role}}</li>
                 }
             </ul>
         </div>

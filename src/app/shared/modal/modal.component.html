@@ -1,7 +1,7 @@
 <div class="modal-container">
     <div class="modal-backdrop">
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" [ngClass]="{'show-modal': !hideModal, 'hide-modal': hideModal}">
+            <div class=" modal-header">
                 <h3 class="modal-title">{{modalTitle()}}</h3>
                 <i class="fa-solid fa-xmark" (click)="onCloseClick()"></i>
             </div>

@@ -4,10 +4,11 @@ import { TimelineProps } from '../../props/timeline-props';
 import { ExperienceDescriptionConstants } from '../../constants/experience.constants';
 import { CommonModule } from '@angular/common';
 import { ExperienceDetailPageComponent } from './experience-detail-page/experience-detail-page.component';
+import { ModalComponent } from '../../shared/modal/modal.component';
 
 @Component({
   selector: 'app-experience-page',
-  imports: [TimelineComponent, CommonModule, ExperienceDetailPageComponent],
+  imports: [TimelineComponent, CommonModule, ModalComponent, ExperienceDetailPageComponent],
   templateUrl: './experience-page.component.html',
   styleUrl: './experience-page.component.scss'
 })

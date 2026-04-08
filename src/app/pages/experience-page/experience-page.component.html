@@ -6,9 +6,11 @@
         <div class="page-content">
             <app-timeline [timelineItems]="experienceItems" (viewDetailsClick)="onViewDetails($event)"></app-timeline>
         </div>
-        @if(detailSelected) {
-        <app-experience-detail-page [detailItem]="detailSelected"
-            (backClick)="onBackClick()"></app-experience-detail-page>
-        }
     </div>
 </div>
+
+@if(detailSelected) {
+    <app-modal (closeClick)="onBackClick()" [modalTitle]="detailSelected.title">
+        <app-experience-detail-page [detailItem]="detailSelected" (backClick)="onBackClick()"></app-experience-detail-page>
+    </app-modal>
+}
