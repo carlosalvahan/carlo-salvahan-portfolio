@@ -13,6 +13,7 @@ $text-shadow: #424242 2px 2px 4px;
         flex-direction: column;
         align-items: center;
         border-bottom: 1px solid #616161;
+
         .header-container {
             color: #ffd180;
             text-shadow: $text-shadow;
@@ -123,33 +124,58 @@ $text-shadow: #424242 2px 2px 4px;
                 }
             }
 
+            .mastery-div {
+                padding: 1rem;
+                i {
+                    text-shadow: 1px 1px 1px #424242;
+                }
+
+                .mastery-num {
+                    font-weight: 500;
+                    margin-left: 1rem;
+                    padding: 0 0.5rem;
+                    background: #424242;
+                    color: white;
+                }
+            }
+
             .skill-desc-content {
                 flex: 1;
-                margin-top: 1rem;
                 display: flex;
                 flex-direction: column;
                 padding: 1rem;
+                overflow-y: auto;
+                height: 100%;
+
+                &::-webkit-scrollbar {
+                    height: 8px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #ccc;
+                    border-radius: 4px;
+                }
+
+                .experience-desc {
+                    border: 1px solid white;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    margin-bottom: 3rem;
+                }
+
                 .span-header {
                     margin-right: 1rem;
                     font-weight: 500;
                     font-size: 1rem;
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
                 }
-                .mastery-div {
-                    i {
-                        text-shadow: 1px 1px 1px #424242;
-                    }
-                    .mastery-num {
-                        font-weight: 500;
-                        margin-left: 1rem;
-                        padding: 0 0.5rem;
-                        background: #424242;
-                        color: white;
-                    }
-                }
+
 
                 .project-list {
                     margin-top: 1rem;
                     color: white;
+
                     .collection-item {
                         background: linear-gradient(135deg, #1A1A1A 0%, #2B2B2B 50%, #3C3C3C 100%);
                     }

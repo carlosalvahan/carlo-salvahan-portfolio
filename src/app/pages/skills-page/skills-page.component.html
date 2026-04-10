@@ -22,25 +22,46 @@
                     </div>
                 </div>
             </div>
+            <div class="mastery-div">
+                <span class="span-header">
+                    Mastery:
+                </span>
+                @for(item of getArray(selectedSkill.mastery); track $index) {
+                <i class="fa-solid fa-star" style="color: #F7DF1E"></i>
+                }
+                @if(selectedSkill.mastery < 5) { @for(noStar of getArray(5 - selectedSkill.mastery +
+                    (isHalfStep(selectedSkill.mastery) ? 0.5 : 0)); track $index) {
+                    @if(isHalfStep(selectedSkill.mastery) && $index===0) { <i class="fa-solid fa-star-half-stroke"
+                    style="color: #F7DF1E"></i>
+                    } @else {
+                    <i class="fa-regular fa-star" style="color: #F7DF1E"></i>
+                    }
+                    }
+                    }
+                    <span class="mastery-num">{{ selectedSkill.mastery + (isHalfStep(selectedSkill.mastery) ? '':
+                        '.0')}}</span>
+            </div>
             <div class="skill-desc-content">
-                <div class="mastery-div">
-                    <span class="span-header">
-                        Mastery:
-                    </span>
-                    @for(item of getArray(selectedSkill.mastery); track $index) {
-                    <i class="fa-solid fa-star" style="color: #F7DF1E"></i>
-                    }
-                    @if(selectedSkill.mastery < 5) { 
-                        @for(noStar of getArray(5 - selectedSkill.mastery +
-                            (isHalfStep(selectedSkill.mastery) ? 0.5 : 0)); track $index) {
-                                @if(isHalfStep(selectedSkill.mastery) && $index===0) { <i class="fa-solid fa-star-half-stroke"
-                                style="color: #F7DF1E"></i>
-                                } @else {
-                                <i class="fa-regular fa-star" style="color: #F7DF1E"></i>
-                            }
-                        }
-                    }
-                    <span class="mastery-num">{{ selectedSkill.mastery + (isHalfStep(selectedSkill.mastery) ? '': '.0')}}</span>
+                <span class="span-header">
+                    Experience:
+                </span>
+                <div class="experience-desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim fugiat quos aspernatur illo
+                        consequatur inventore, eius dolore impedit minima repellendus rem quasi consectetur obcaecati
+                        nobis? Consequatur magnam officia aliquid facilis sunt nulla aliquam nemo ratione deserunt
+                        sapiente eius voluptatum sequi provident odio maiores, est placeat quo hic quasi molestiae esse
+                        quae. Quam necessitatibus officia nemo rerum? Quo, aut? Excepturi voluptate, iusto unde fugiat
+                        architecto modi esse molestiae! Odit ducimus assumenda unde? Quaerat quas labore ullam, eius
+                        porro voluptate. Hic officia maiores quasi ratione omnis expedita amet soluta ullam. Esse neque
+                        veniam a quas dolor. Ratione ducimus in quod corporis odio corrupti dignissimos porro velit id
+                        ex est deleniti, odit magnam, sunt sapiente tenetur doloremque tempore sequi. Distinctio dolore
+                        ad, necessitatibus ducimus possimus voluptas consequuntur voluptate neque quasi! Rem distinctio
+                        aut quo repellat assumenda possimus iste. Eos eum voluptatem error, accusamus sunt, iure ratione
+                        eveniet accusantium explicabo quisquam consequuntur tempore nisi, laborum optio? Mollitia
+                        aperiam similique obcaecati. Culpa soluta magni, expedita sint commodi exercitationem nobis ut
+                        magnam quam quisquam perferendis nemo nam inventore odio, aperiam ratione, cupiditate distinctio
+                        cum amet libero? Dolores, perferendis. Exercitationem expedita nihil id facilis magni, dolorum
+                        rem natus laudantium. Aperiam nulla nostrum perferendis reiciendis omnis molestiae magni.</p>
                 </div>
                 <div>
                     <span class="span-header">
