@@ -38,7 +38,7 @@
             <div class="section-container">
                 <ul>
                     @for(role of selectedProject()?.keyRoles; track $index) {
-                    <li [ngStyle]="{'animation-delay': (1 + (0.4 * $index))+'s'}"><i class="fa-solid fa-square"
+                    <li [ngStyle]="{'animation-delay': (0.5 + (0.4 * $index))+'s'}"><i class="fa-solid fa-square"
                             style="color: rgb(99, 230, 190);"></i>{{role}}</li>
                     }
                 </ul>
