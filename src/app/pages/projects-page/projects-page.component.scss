@@ -108,19 +108,6 @@
                     .expand-button {
                         margin-top: 1rem;
                         padding: 0.5rem 2rem;
-                        background-color: #1F3C81;
-                        color: white;
-                        cursor: pointer;
-                        border-radius: 1rem;
-                        border: 1px solid transparent;
-                        font-weight: 700;
-                        transition: all 0.25s ease;
-
-                        &:hover {
-                            background-color: #2a4fb0;
-                            transform: translateY(-2px);
-                            box-shadow: 0 6px 15px rgba(31, 60, 129, 0.4);
-                        }
                     }
                 }
 

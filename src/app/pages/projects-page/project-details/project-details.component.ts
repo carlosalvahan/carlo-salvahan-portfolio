@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ProjectDetailsComponent {
   selectedProject: any = input<any>(null);
   skillList: any[] = [];
+  activeGrid: string = 'description';
 
   constructor() {
     effect(() => {

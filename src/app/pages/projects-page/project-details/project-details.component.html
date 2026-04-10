@@ -5,31 +5,45 @@
         </div>
         <div class="detail-header-text">
             <div>
-                <span class="detail-title">Company: </span> <span class="detail-header-value">{{selectedProject()?.company}}</span>
+                <span class="detail-title">Company: </span> <span
+                    class="detail-header-value">{{selectedProject()?.company}}</span>
             </div>
             <div>
-                <span class="detail-title">Position: </span>  <span class="detail-header-value">{{selectedProject()?.position}}</span>
+                <span class="detail-title">Position: </span> <span
+                    class="detail-header-value">{{selectedProject()?.position}}</span>
             </div>
         </div>
     </div>
     <div class="skill-pills">
-        @for(skill of skillList; track $index) { 
-            <span class="skill-pill" [ngStyle]="{'animation-delay': (1 + (0.3 * $index))+'s'}">{{skill.name}}<i [ngClass]="skill.icon" [ngStyle]="{color: skill.color}"></i></span>
+        @for(skill of skillList; track $index) {
+        <span class="skill-pill" [ngStyle]="{'animation-delay': (1 + (0.3 * $index))+'s'}">{{skill.name}}<i
+                [ngClass]="skill.icon" [ngStyle]="{color: skill.color}"></i></span>
         }
     </div>
     <div class="project-detail-grid">
-        <div class="project-description">
-            <div class="detail-title">Project Description <i class="fa-solid fa-briefcase"
-                    style="color: rgb(99, 230, 190);"></i></div>
-            <p style="white-space: pre-line;">{{selectedProject()?.longDesc}}</p>
+        @if(activeGrid === 'description') {
+        <div class="project-description modal-section">
+            <div class="detail-title">Project Details <i class="fa-solid fa-briefcase"
+                    style="color: rgb(99, 230, 190);"></i><button class="key-role-button" (click)="activeGrid = 'keyRoles'">Core Responsibilities <i
+                        class="fa-solid fa-chevron-right"></i></button></div>
+            <div class="section-container">
+                <p style="white-space: pre-line;">{{selectedProject()?.longDesc}}</p>
+            </div>
         </div>
+        }
+        @if(activeGrid === 'keyRoles') {
         <div class="key-roles">
-            <div class="detail-title">Key Roles <i class="fa-solid fa-user" style="color: rgb(99, 230, 190);"></i></div>
-            <ul>
-                @for(role of selectedProject()?.keyRoles; track $index) {
-                <li [ngStyle]="{'animation-delay': (2.5 + (0.4 * $index))+'s'}"><i class="fa-solid fa-square" style="color: rgb(99, 230, 190);"></i>{{role}}</li>
-                }
-            </ul>
+            <div class="detail-title">Core Responsibilities <i class="fa-solid fa-user" style="color: rgb(99, 230, 190);"></i><button class="key-role-button" (click)="activeGrid = 'description'"><i
+                        class="fa-solid fa-chevron-left"></i>Project Details</button></div>
+            <div class="section-container">
+                <ul>
+                    @for(role of selectedProject()?.keyRoles; track $index) {
+                    <li [ngStyle]="{'animation-delay': (1 + (0.4 * $index))+'s'}"><i class="fa-solid fa-square"
+                            style="color: rgb(99, 230, 190);"></i>{{role}}</li>
+                    }
+                </ul>
+            </div>
         </div>
+        }
     </div>
 </div>
