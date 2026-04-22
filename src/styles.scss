@@ -2,14 +2,13 @@ $primary-button-bg-color: #f9a825;
 $primary-button-color: #ffffff;
 $primary-button-border: 1px solid white;
 $primary-button-radius: 1rem;
-$primary-button-transition:  transform 0.3s ease;
+$primary-button-transition: transform 0.3s ease;
 
 .portfolio-section {
     padding-bottom: 150px;
 }
 
-.modal-section {
-}
+.modal-section {}
 
 .primary-button {
     background: $primary-button-bg-color;
@@ -22,5 +21,97 @@ $primary-button-transition:  transform 0.3s ease;
     &:hover {
         background: #f57f17;
         transform: scale(1.2);
+    }
+}
+
+/* Tablet and below */
+@media (max-width: 991.98px) {}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .page-container {
+        height: 100vh;
+
+        .app-row {
+            flex-direction: column;
+            ;
+        }
+
+        .app-content {
+            &::before {
+                left: 0 !important;
+            }
+        }
+    }
+
+    .page-header, .skill-header, .projects-header {
+        margin-top: 4rem !important;
+    }
+    .app-sidebar {
+        flex-direction: row !important;
+        width: 100% !important;
+        position: fixed !important;
+        top: 0 !important;
+        z-index: 2 !important;
+        height: auto !important;
+        flex: 1 !important;
+        justify-content: space-around !important;
+        nav {
+            height: max-content !important;
+        }
+        app-image{ 
+            display: none !important;
+        }
+        .custom-nav-container {
+            width: 100% !important;
+            ul {
+                flex-direction: row !important;
+                >li.active {
+                    border-bottom: 0.5rem solid white !important;
+                    border-left:0 !important;
+                }
+            }
+        }
+    }
+}
+
+.intro-header {
+    font-size: 2rem !important;
+}
+
+
+.about-me-content {
+    margin: 3rem 0 !important;
+    padding: 4rem 2rem !important;
+}
+
+.project-item {
+    flex: 0 0 30rem !important;
+}
+
+.skill-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 1rem !important;
+}
+
+.sidebar-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    color: white;
+    background-color: #424242;
+    box-shadow: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    display: block !important;
+}
+
+/* Small mobile */
+@media (max-width: 575.98px) {
+    app-image {
+        display: none;
     }
 }

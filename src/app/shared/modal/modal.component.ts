@@ -23,6 +23,6 @@ export class ModalComponent implements OnInit {
     this.hideModal = true;
     setTimeout(() => {
       this.closeClick.emit()
-    }, 900);
+    }, 400);
   }
 }

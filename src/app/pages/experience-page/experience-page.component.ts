@@ -14,7 +14,7 @@ import { ModalComponent } from '../../shared/modal/modal.component';
 })
 export class ExperiencePageComponent {
   experienceItems = [
-    new TimelineProps('fa-solid fa-hand-holding-heart', ExperienceDescriptionConstants[2024], 'Present', '#fff176'), // hand holding heart
+    new TimelineProps('fa-solid fa-hand-holding-heart', ExperienceDescriptionConstants[2024], '2025', '#fff176'), // hand holding heart
     new TimelineProps('fa-solid fa-file-invoice-dollar', ExperienceDescriptionConstants[2021], '2021', '#A2B973'), // file-invoice-dollar
     new TimelineProps('fa-solid fa-briefcase', ExperienceDescriptionConstants[2020], '2020', '#ffd180 '), // briefcase
     new TimelineProps('fa-solid fa-plane', ExperienceDescriptionConstants[2018], '2018', '#f8bbd0'), // airplane

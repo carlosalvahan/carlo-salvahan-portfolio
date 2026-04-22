@@ -1,6 +1,11 @@
 .page-container {
     display: flex;
     min-height: 100vh;
+    width: 100%;
+
+    .sidebar-button {
+        display: none;
+    }
 
     .show {
         opacity: 1;
@@ -52,3 +57,4 @@
         }
     }
 }
+
