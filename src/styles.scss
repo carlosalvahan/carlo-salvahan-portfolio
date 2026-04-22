@@ -18,10 +18,11 @@ $primary-button-transition: transform 0.3s ease;
     border-radius: $primary-button-radius;
     transition: $primary-button-transition;
 
-    &:hover {
+    &:hover, &:focus {
         background: #f57f17;
         transform: scale(1.2);
     }
+    
 }
 
 /* Tablet and below */

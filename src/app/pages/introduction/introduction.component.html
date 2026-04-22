@@ -33,7 +33,7 @@
                     </div>
                     <div class="project-highlight"><i class="fa-solid fa-caret-right"></i>Developed a UI with ReactJS,
                         ensuring seamless integration with backend services.</div>
-                    <button class="project-details-button primary-button">Project Details</button>
+                    <button class="project-details-button primary-button" (click)="openProject('U.S Veterans Insurance')">Project Details</button>
                 </div>
                 <div class="project-item" appScrollAnimate>
                     <div class="icon-container"><i class="fa-solid fa-building-columns"></i></div>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="project-highlight"><i class="fa-solid fa-caret-right"></i>Built responsive Angular-based
                         interfaces that effectively interact with backend services.</div>
-                    <button class="project-details-button primary-button">Project Details</button>
+                    <button class="project-details-button primary-button" (click)="openProject('Property Tax Management')">Project Details</button>
                 </div>
                 <div class="project-item" appScrollAnimate>
                     <div class="icon-container"><i class="fa-solid fa-plane-up"></i></div>
@@ -50,7 +50,7 @@
                     <div class="project-subtitle">Effortless flight booking with a smooth and reliable experience.</div>
                     <div class="project-highlight"><i class="fa-solid fa-caret-right"></i>Created dynamic Angular
                         interfaces designed to handle data and interactions with backend systems.</div>
-                    <button class="project-details-button primary-button">Project Details</button>
+                    <button class="project-details-button primary-button" (click)="openProject('Airline Flight Booking')">Project Details</button>
                 </div>
             </div>
         </div>
@@ -84,3 +84,9 @@
         </div>
     </div>
 </div>
+
+@if(showModal) {
+    <app-modal (closeClick)="modalClose()" [modalTitle]="selectedProject.name">
+        <app-project-details [selectedProject]="selectedProject"></app-project-details>
+    </app-modal>
+}
