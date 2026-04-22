@@ -25,7 +25,15 @@ $primary-button-transition: transform 0.3s ease;
 }
 
 /* Tablet and below */
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+    .intro-header {
+        font-size: 2vh !important;
+    }
+    .about-me-content {
+        margin: 3rem 0 !important;
+        padding: 4rem 2rem !important;
+    }
+}
 
 /* Mobile */
 @media (max-width: 767.98px) {
@@ -44,9 +52,12 @@ $primary-button-transition: transform 0.3s ease;
         }
     }
 
-    .page-header, .skill-header, .projects-header {
+    .page-header,
+    .skill-header,
+    .projects-header {
         margin-top: 4rem !important;
     }
+
     .app-sidebar {
         flex-direction: row !important;
         width: 100% !important;
@@ -56,58 +67,64 @@ $primary-button-transition: transform 0.3s ease;
         height: auto !important;
         flex: 1 !important;
         justify-content: space-around !important;
+
         nav {
             height: max-content !important;
         }
-        app-image{ 
+
+        app-image {
             display: none !important;
         }
+
         .custom-nav-container {
             width: 100% !important;
+
             ul {
                 flex-direction: row !important;
+
                 >li.active {
                     border-bottom: 0.5rem solid white !important;
-                    border-left:0 !important;
+                    border-left: 0 !important;
                 }
             }
         }
     }
+
+    .intro-header {
+        font-size: 2rem !important;
+    }
+
+
+    .about-me-content {
+        margin: 3rem 0 !important;
+        padding: 4rem 2rem !important;
+    }
+
+    .project-item {
+        flex: 0 0 30rem !important;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 1rem !important;
+    }
+
+    .sidebar-button {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1;
+        color: white;
+        background-color: #424242;
+        box-shadow: none;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        display: block !important;
+    }
 }
 
-.intro-header {
-    font-size: 2rem !important;
-}
-
-
-.about-me-content {
-    margin: 3rem 0 !important;
-    padding: 4rem 2rem !important;
-}
-
-.project-item {
-    flex: 0 0 30rem !important;
-}
-
-.skill-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    gap: 1rem !important;
-}
-
-.sidebar-button {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1;
-    color: white;
-    background-color: #424242;
-    box-shadow: none;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    display: block !important;
-}
 
 /* Small mobile */
 @media (max-width: 575.98px) {
