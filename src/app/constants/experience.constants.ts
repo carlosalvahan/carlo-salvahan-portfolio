@@ -64,7 +64,7 @@ const ExperienceDetailsConstants = {
       description: 'I am currently still with IBM, where I transitioned to a different project under the same client. This project focuses on property tax management, covering areas such as asset management, tax billing, and tax return processing. I continue to work as a Frontend Developer using Angular, and this has been the longest project I have been involved in, spanning nearly four years.'
     }
   },
-  'Present': {
+  '2025': {
     'IBM Solutions Inc.': {
       ...CompaniesConstants['IBM Solutions Inc.'],
       duration: 'Jan 2025 - Present',
@@ -78,7 +78,7 @@ const ExperienceSkillsConstants = {
   '2018': ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Materialize'],
   '2020': ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Bootstrap'],
   '2021': ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Bootstrap'],
-  'Present': ['ReactJS', 'JavaScript', 'HTML5', 'CSS3']
+  '2025': ['ReactJS', 'JavaScript', 'HTML5', 'CSS3']
 }
 
 

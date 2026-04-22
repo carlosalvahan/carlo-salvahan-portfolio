@@ -28,4 +28,11 @@ export class IntroductionComponent {
     }
     this.showModal = true;
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'CarloSalvahanCV.pdf';
+    link.download = 'Carlo_Salvahan_CV.pdf';
+    link.click();
+  }
 }
