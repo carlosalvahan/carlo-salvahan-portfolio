@@ -7,6 +7,8 @@ img.circle {
 
 .image-row {
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 h3 {
