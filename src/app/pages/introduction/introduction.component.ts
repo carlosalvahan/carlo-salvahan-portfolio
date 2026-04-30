@@ -4,10 +4,11 @@ import { ModalComponent } from '../../shared/modal/modal.component';
 import { ProjectDetailsComponent } from '../projects-page/project-details/project-details.component';
 import { ProjectConstants } from '../../constants/project.constants';
 import { CompaniesConstants } from '../../constants/experience.constants';
+import { ContactPageComponent } from '../contact-page/contact-page.component';
 
 @Component({
   selector: 'app-introduction',
-  imports: [ScrollAnimateDirective, ModalComponent, ProjectDetailsComponent],
+  imports: [ScrollAnimateDirective, ModalComponent, ProjectDetailsComponent, ContactPageComponent],
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss'
 })

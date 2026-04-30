@@ -3,7 +3,7 @@
         <h2>Let's Connect</h2>
         <h6>If you have an opportunity in mind, feel free to reach out and let's create something impactful.</h6>
     </div>
-    <div class="contact-content">
+    <div class="contact-content" appScrollAnimate>
         <div class="contact-info-div">
             <div class="contact-info-item">
                 <span class="contact-item-label"><i class="fa-regular fa-envelope" style="color: rgb(99, 230, 190);"></i>Email:</span>
@@ -19,15 +19,15 @@
             </div>
         </div>
         <div class="contact-badges-div">
-            <div class="contact-badges">
+            <div class="contact-badges" (click)="redirectTo()">
                 <i class="fa-brands fa-linkedin" style="color: #0A66C2"></i> LinkedIn
             </div>
-            <div class="contact-badges">
+            <!-- <div class="contact-badges">
                 <i class="fa-brands fa-viber" style="color: #5740BE"></i>Viber
             </div>
             <div class="contact-badges">
                 <i class="fa-brands fa-whatsapp" style="color: #25D366"></i>WhatsApp
-            </div>
+            </div> -->
             
         </div>
     </div>
