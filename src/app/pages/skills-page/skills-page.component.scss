@@ -8,11 +8,13 @@ $text-shadow: #424242 2px 2px 4px;
     animation: fadeIn 1s ease-out;
 
     .skill-header {
-        flex: 0 0 10rem;
+        flex: 0 0 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-bottom: 1px solid #616161;
+        font-weight: 700;
+        border-bottom: 3px solid #616161;
+        padding: 1rem 3rem;
 
         .header-container {
             color: #ffd180;
@@ -34,10 +36,9 @@ $text-shadow: #424242 2px 2px 4px;
             overflow-x: hidden;
             overflow-y: auto;
             white-space: nowrap;
-            padding: 1rem;
-            padding: 5rem 2rem;
+            padding: 2rem 0;
             height: 100%;
-            flex: 0 0 15rem;
+            flex: 0 0 7rem;
             flex-direction: column;
             align-items: center;
             background-color: #424242;
@@ -50,7 +51,7 @@ $text-shadow: #424242 2px 2px 4px;
             }
 
             i {
-                font-size: 5rem;
+                font-size: 2rem;
                 text-shadow: 1px 1px 1px black;
 
                 &:hover {
@@ -92,6 +93,7 @@ $text-shadow: #424242 2px 2px 4px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    display: none;
 
                     .desc-image {
                         font-size: 9rem;
@@ -111,11 +113,11 @@ $text-shadow: #424242 2px 2px 4px;
                     align-items: flex-start;
 
                     .skill-desc-details {
-                        padding: 0 2rem;
-                        padding-top: 1.5rem;
+                        padding: 0 0.5rem;
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
+                        font-size: 0.75rem;
 
                         h3 {
                             margin: 0;
@@ -193,5 +195,43 @@ $text-shadow: #424242 2px 2px 4px;
 
     to {
         opacity: 1;
+    }
+}
+
+@media (min-width: 1128px) {
+    .full-screen-container {
+        .skill-header {
+            flex: 0 0 10rem;
+            font-size: 3rem;
+        }
+
+        .skill-content {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+
+            .skill-container {
+                flex: 0 0 15rem;
+                padding: 4rem 0;
+
+                i {
+                    font-size: 5rem;
+                }
+            }
+
+            .skill-desc-container {
+                .skill-desc-header {
+                    .skill-image {
+                        display: flex;
+                    }
+                    .skill-desc-details-container {
+                        .skill-desc-details {
+                            font-size: 1rem;
+                            padding-top: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
