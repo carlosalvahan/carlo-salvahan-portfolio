@@ -97,3 +97,11 @@
         transform: translateY(50px);
     }
 }
+
+@media (min-width: 1128px) {
+    :host {
+        .modal-backdrop {
+            position: absolute;
+        }
+    }
+}
