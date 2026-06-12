@@ -4,6 +4,7 @@ $text-shadow: #424242 2px 2px 4px;
 .full-screen-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .header-container {
@@ -45,6 +46,9 @@ h3 {
 
     .detail-container {
         margin: 2rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         .card-action {
             border-bottom: 1px solid white;
         }
@@ -56,7 +60,53 @@ h3 {
             opacity: 0;
             animation: fadeSlide 1s ease-out forwards;
         }
+        .company-container {
+            .image-row {
+                border: 1px solid #efefef;
+                padding: 1rem;
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 0.5rem;
+                img {
+                    height: 5rem;
+                    width: 5rem;
+                    // padding: 3rem;
+                    padding: 0.5rem;
+                    background: white;
+                    border-radius: 10%;
+                    border: 2px solid #EFEFEF;
+                    opacity: 0;
+                    animation: fadeSlide 1s ease-out forwards;
+                }
+                .text-row {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    font-size: 0.75rem;
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .toolkit-header {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        .skill-box {
+            display: flex;
+            width: 100%;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 10rem;
+            .skill-item {
+                font-size: 3rem;
+            }
+        }
     }
+
+    
+
 
     .card {
         border-width: 1px;
@@ -78,44 +128,30 @@ h3 {
             height: 100%;
             background: white;
 
-            img {
-                height: 16rem;
-                width: 16rem;
-                padding: 3rem;
-                border: 2px solid #EFEFEF;
-                opacity: 0;
-                animation: fadeSlide 1s ease-out forwards;
-            }
+           
         }
     }
 
 
     .detail-skills {
-        border-style: solid;
-        border-width: 1px;
-        box-shadow: $item-box-shadow;
         display: flex;
-        flex-direction: column;
-        color: #212121;
         color: white;
-
-        h3 {
-            padding: 1rem;
-        }
 
         .skill-list {
             display: flex;
             margin: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
 
             .skill-group {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 animation: fadeSlide 1s ease-out forwards;
-                    opacity: 0;
+                opacity: 0;
 
                 .skill-item {
-                    font-size: 5rem;
+                    font-size: 3rem;
 
                     i:hover {
                         transform: scale(1.5);
@@ -141,5 +177,35 @@ h3 {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media (min-width: 1128px) { 
+    .full-screen-container {
+        .details-content {
+            .detail-container {
+                gap: 1.5rem;
+                .company-container {
+                    width: 80%;
+                    .image-row {
+                        .text-row {
+                            font-size: 1rem;
+                            p {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .detail-skills {
+                .skill-list {
+                    .skill-group {
+                        .skill-item {
+                            font-size: 7rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

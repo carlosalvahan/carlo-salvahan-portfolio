@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, effect, signal, OnInit } from '@angular/core';
 import { TimelineProps } from '../../props/timeline-props';
 import { CommonModule } from '@angular/common';
 import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
@@ -9,11 +9,21 @@ import { ScrollAnimateDirective } from '../../directives/scroll-animate.directiv
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.scss'
 })
-export class TimelineComponent {
+export class TimelineComponent implements OnInit{
   timelineItems = input<TimelineProps[]>([]);
-  viewDetailsClick = output<TimelineProps>();
+  timelineSelected = output<TimelineProps>();
+  localTimelineItems = signal<TimelineProps[]>([]);
 
-  onViewDetails(title: TimelineProps) {
-    this.viewDetailsClick.emit(title);
+  ngOnInit(): void {
+    this.localTimelineItems.set(this.timelineItems());
+  }
+
+
+  onTimelineSelected(timelineItem: TimelineProps) {
+    const newTimelineItems = this.timelineItems().map(item => {
+        return {...item, selected: item.title === timelineItem.title};
+    });
+    this.localTimelineItems.set(newTimelineItems);
+    this.timelineSelected.emit(timelineItem);
   }
 }

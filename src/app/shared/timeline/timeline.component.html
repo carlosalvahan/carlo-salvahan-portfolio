@@ -1,43 +1,8 @@
-<div class="full-page-container">
-    <div class="timeline-container">
-        @for (item of timelineItems(); track $index) {
-        <div class="timeline-row">
-            <div class="timeline-col left-column-container">
-                <div class="left-column">
-                    @if ($index !== 0 && $index % 2 !== 0) {
-                    <h3  [ngStyle]="{'color': item.barColor}">{{ item.title }}</h3>
-                    <div class="left-column-line" [ngStyle]="{'border-color': item.barColor}"></div>
-                    <div class="timeline-image"  [ngStyle]="{'background-color': item.barColor}" (click)="onViewDetails(item)">
-                        <i [ngClass]="item.iconClass" class="timeline-icon"></i>
-                        <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-up"></i></span>
-                    </div>
-                    <div class="line-connector" [ngStyle]="{'background-color': item.barColor}"></div>
-                    } @else {
-                    <p>
-                        {{ item.description }}
-                    </p>
-                    }
-                </div>
-            </div>
-            <div class="timeline-col right-column-container">
-                <div class="right-column">
-                    @if ($index === 0 || $index % 2 === 0) {
-                    <div class="right-column-line" [ngStyle]="{'border-color': item.barColor}"></div>
-                    <div class="line-connector" [ngStyle]="{'background-color': item.barColor}">
-                    </div>
-                    <div class="timeline-image" [ngStyle]="{'background-color': item.barColor}"  (click)="onViewDetails(item)">
-                        <i [ngClass]="item.iconClass" class="timeline-icon" ></i>
-                        <span class="hover-timeline-text">View Details<i class="fa-solid fa-chevron-up"></i></span>
-                    </div>
-                    <h3 [ngStyle]="{'color': item.barColor}">{{ item.title }}</h3>
-                    } @else{
-                    <p>
-                        {{ item.description }}
-                    </p>
-                    }
-                </div>
-            </div>
-        </div>
+<div class="timeline-container">
+    @for (item of localTimelineItems(); track $index) {
+    <div class="timeline-item" (click)="onTimelineSelected(item)" [ngClass]="{selected: item.selected}">{{item.title}}</div>
+    @if($index < timelineItems().length - 1) { 
+        <i class="fa-solid fa-minus" style="color: white;"></i>
         }
-    </div>
+    }
 </div>

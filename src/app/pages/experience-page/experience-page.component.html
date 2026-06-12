@@ -1,16 +1,17 @@
 <div class="super-container">
     <div class="experience-page-container">
         <div class="page-header">
-            <h3>EXPERIENCE TIMELINE <i class="fa-solid fa-clock"></i></h3>
+            <span>Experience Timeline <i class="fa-solid fa-clock"></i></span>
         </div>
         <div class="page-content">
-            <app-timeline [timelineItems]="experienceItems" (viewDetailsClick)="onViewDetails($event)"></app-timeline>
+            <app-timeline [timelineItems]="experienceItems" (timelineSelected)="onTimelineSelected($event)"></app-timeline>
+            <app-experience-detail-page [detailItem]="detailSelected"></app-experience-detail-page>
         </div>
     </div>
 </div>
 
-@if(detailSelected) {
+<!-- @if(detailSelected) {
     <app-modal (closeClick)="onBackClick()" [modalTitle]="detailSelected.title">
         <app-experience-detail-page [detailItem]="detailSelected" (backClick)="onBackClick()"></app-experience-detail-page>
     </app-modal>
-}
+} -->

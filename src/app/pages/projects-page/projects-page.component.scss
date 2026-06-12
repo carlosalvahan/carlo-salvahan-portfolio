@@ -27,6 +27,7 @@
         justify-content: center;
         overflow-y: auto;
         padding: 2rem;
+        margin-bottom: 5rem;
 
         .project-item {
             display: flex;
@@ -160,7 +161,7 @@
 
         .projects-content {
             padding: 3rem;
-
+            margin-bottom: 0;
         }
     }
 }

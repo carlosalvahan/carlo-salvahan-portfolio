@@ -149,6 +149,7 @@ $text-shadow: #424242 2px 2px 4px;
                 padding: 1rem;
                 overflow-y: auto;
                 height: 100%;
+                margin-bottom: 5rem;
 
                 &::-webkit-scrollbar {
                     height: 8px;
@@ -220,6 +221,9 @@ $text-shadow: #424242 2px 2px 4px;
             }
 
             .skill-desc-container {
+                .skill-desc-content {
+                            margin-bottom: 0;
+                }
                 .skill-desc-header {
                     .skill-image {
                         display: flex;
@@ -229,6 +233,7 @@ $text-shadow: #424242 2px 2px 4px;
                             font-size: 1rem;
                             padding-top: 1.5rem;
                         }
+                        
                     }
                 }
             }
