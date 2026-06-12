@@ -13,5 +13,15 @@ import { NavBarProps } from '../../props/nav-bar-props';
 })
 export class NavBarComponent {
   navBarItems = input<NavBarProps[]>([]);
+  readonly imageDp = 'Alodp2.png';
+  showNav: boolean = false;
+
+  showSideNav() {
+    this.showNav = true;
+  }
+
+  hideSideNav() {
+    this.showNav = false;
+  }
 }
 

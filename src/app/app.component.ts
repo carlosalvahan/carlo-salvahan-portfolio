@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ImageComponent } from './shared/image/image.component';
 import { NavBarProps } from './props/nav-bar-props';
-import { ModalComponent } from './shared/modal/modal.component';
 
 @Component({
   selector: 'app-root',

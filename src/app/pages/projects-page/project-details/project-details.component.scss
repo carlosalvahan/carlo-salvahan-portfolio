@@ -5,6 +5,7 @@
     font-size: 1.2rem;
     margin-right: 1rem;
     height: 100%;
+    overflow-y: auto;
 
     .project-details-header {
         display: flex;
@@ -16,11 +17,13 @@
         .detail-header-text {
             display: flex;
             flex-direction: column;
+            font-size: 0.5rem;
 
             .detail-header-value {
                 opacity: 0;
                 animation: fadeSlide 1s ease-out forwards;
                 animation-delay: 0.5s;
+                font-size: 0.75rem;
             }
         }
     }
@@ -32,8 +35,8 @@
         background: white;
 
         img {
-            height: 5rem;
-            width: 7rem;
+            height: 3rem;
+            width: 3rem;
             padding: 0.5rem;
             animation: fadeSlide 1s ease-out forwards;
             animation-delay: 0.5s;
@@ -44,6 +47,7 @@
     .detail-title {
         font-weight: 700;
         padding-right: 1rem;
+        font-size: 0.75rem;
     }
 
     .project-detail-grid {
@@ -66,7 +70,6 @@
 
         .project-description,
         .key-roles {
-            margin: 1rem 2rem;
             position: relative;
             height: 100%;
             
@@ -84,7 +87,8 @@
                 border-radius: 0.5rem;
                 padding: 1rem;
                 overflow-y: auto;
-                height: 50%;
+                height: 70%;
+                font-size: 0.75rem;
                 &::-webkit-scrollbar {
                     height: 1px;
                     margin-right: 5rem;    
@@ -100,28 +104,28 @@
                 animation: fadeSlide 1s ease-out forwards;
                 opacity: 0;
                 animation-delay: 0.5s;
-                font-size: 1.3rem;
             }
 
             .detail-title {
-                font-size: 1.5rem;
+                font-size: 0.75rem;
                 font-weight: 700;
-                margin-bottom: 2rem;
+                margin-bottom: 0.5rem;
                 display: flex;
                 align-items: center;
+                padding: 0.5rem 0.5rem;
             }
 
             .key-role-button {
                 position: absolute;
                 right: 0.5rem;
                 top: 0;
-                padding: 1rem 0.5rem;
+                padding: 0.5rem 0.5rem;
                 font-size: 0.75rem;
                 background-color: #1F3C81;
                 border: 1px solid white;
                 color: white;
                 cursor: pointer;
-                border-radius: 1rem;
+                border-radius: 0.5rem;
 
                 &:hover {
                     background-color: #2a4fb0;
@@ -143,20 +147,21 @@
         display: flex;
         flex-shrink: 0;
         border-bottom: 1px solid white;
-        padding-bottom: 2rem;
-        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
 
         span {
             background: linear-gradient(135deg, #000000 0%, #0D0D0D 40%, #1A1A1A 70%, #262626 100%);
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.5rem 0.5rem;
             border: 1px solid #616161;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             text-shadow: 2px 2px 2px #212121;
             transition: transform 0.3s ease;
             flex: 0 0 auto;
             opacity: 0;
             animation: fadeSlide 1s ease-out forwards;
+            font-size: 0.75rem;
 
         }
     }
@@ -196,5 +201,63 @@
     from {
         opacity: 0;
         transform: translateX(50px);
+    }
+}
+
+
+@media (min-width: 1128px) {
+    .project-details-container {
+        .project-details-header {
+            .detail-header-text {
+                font-size: 1rem;
+
+                .detail-header-value {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .card-image {
+            height: 100%;
+            border: 2px solid #EFEFEF;
+            border-radius: 15%;
+            background: white;
+
+            img {
+                height: 5rem;
+                width: 7rem;
+            }
+        }
+
+        .detail-title {
+            font-size: 1rem;
+        }
+
+        .project-detail-grid {
+
+            .key-roles {
+                margin: 1rem 2rem;
+            }
+
+
+            .project-description,
+            .key-roles {
+                .section-container {
+                    font-size: 1rem;
+                }
+
+                .detail-title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .skill-pills {
+            padding-bottom: 2rem;
+            margin-bottom: 1rem;
+            .skill-pill {
+                font-size: 1rem;
+            }
+        }
     }
 }

@@ -7,5 +7,36 @@
             </a>
         </li>
         }
-    </ul>
+    </ul>   
 </nav>
+
+<div class="burger-side-nav" [ngClass]="showNav ? 'show' : ''">
+    <div class="side-nav-backdrop"  [ngClass]="showNav ? 'show' : ''"></div>
+    <div class="side-nav-content" [ngClass]="showNav ? 'show' : ''">
+        <div class="close-button" (click)="hideSideNav()"><i class="fa-solid fa-times"></i></div>
+        <div class="center-align image-row">
+            <img [src]="imageDp" alt="" class="circle responsive-img">
+            <div class="text-section">
+                <span class="white-text">Carlo Salvahan</span>
+                <span class="grey-text lighten-5">Frontend Developer</span>
+            </div>
+        </div>
+        <ul>
+            @for (item of navBarItems(); track item.navText) {
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="hideSideNav()">
+                <a [routerLink]="item.link" [ngClass]="item.textClass">
+                    <i [ngClass]="item.icon" class="icon-spacing"></i>{{ item.navText }}
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="mobile-nav">
+    <div class="mobile-nav-container">
+        <div class="image-section"><img [src]="imageDp" alt="" class="circle responsive-img">Carlo Salvahan</div>
+        <div class="hamburger-section"><button class="button-burger" (click)="showSideNav()"><i class="fa-solid fa-bars"></i></button></div>
+    </div>
+</div>
+

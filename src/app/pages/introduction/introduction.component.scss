@@ -1,4 +1,4 @@
-$content-header-font-size: 2.5rem;
+$content-header-font-size: 2rem;
 $content-header-font-weight: 500;
 $content-header-text-shadow: none;
 $content-header-color: white;
@@ -8,19 +8,22 @@ $content-header-color: white;
     flex: 1;
     flex-direction: column;
     height: 100vh;
+    height: 100dvh;
+    overflow-y: hidden;
 
 
     .intro-header {
         color: white;
-        font-size: 1.75rem;
+        font-size: 1rem;
         font-style: italic;
         text-shadow: 2px 2px 1px #424242;
-        padding: 4rem 5rem;
-        height: 35vh;
+        padding: 1rem 2rem;
         display: flex;
         align-items: center;
         flex: 0 0 auto;
         border-bottom: 3px solid #616161;
+        position: sticky;
+        z-index: 9;
 
         span {
             opacity: 0;
@@ -54,7 +57,7 @@ $content-header-color: white;
         align-items: baseline;
         overflow-y: auto;
         gap: 4rem;
-        padding: 5rem;
+        padding: 3rem;
         padding-top: 3rem;
         color: white;
         flex-direction: column;
@@ -74,7 +77,7 @@ $content-header-color: white;
                 border-radius: 1rem;
                 font-size: 2rem;
                 padding: 3rem 4rem;
-                margin: 3rem 5rem;
+                margin: 1rem 0;
                 position: relative;
 
                 .about-me-words {
@@ -92,7 +95,7 @@ $content-header-color: white;
 
 
                 .download-cv-div {
-                    text-align: right;
+                    text-align: center;
                     margin-top: 1rem;
                     .button {
                         padding: 1rem;
@@ -107,7 +110,6 @@ $content-header-color: white;
         }
 
         .career-section {
-
             .career-header {
                 font-size: $content-header-font-size;
                 font-weight: $content-header-font-weight;
@@ -123,7 +125,7 @@ $content-header-color: white;
                 align-items: center;
                 flex-wrap: wrap;
                 width: 100%;
-
+                justify-content: center;
 
                 img {
                     height: 8rem;
@@ -183,6 +185,7 @@ $content-header-color: white;
                 gap: 3rem;
                 padding: 2rem;
                 margin-top: 1rem;
+                justify-content: center;
 
                 div {
                     background: linear-gradient(135deg, #000000 0%, #0D0D0D 40%, #1A1A1A 70%, #262626 100%);
@@ -351,5 +354,32 @@ $content-header-color: white;
             margin-top: 0.5rem;
             font-size: 1rem;
         }
+    }
+}
+
+:host {
+    overflow-y: hidden;
+}
+
+@media (min-width: 1128px) { 
+    .intro-container {
+        .intro-header {
+            font-size: 2.5rem;
+            padding: 4rem;
+        }
+        .portfolio-section {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .intro-content {
+            .about-me-section {
+                .about-me-content {
+                    .download-cv-div {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        
     }
 }

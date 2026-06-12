@@ -3,6 +3,8 @@
     flex-direction: column;
     width: 100%;
     flex: 1;
+    text-align: center;
+    margin-bottom: 3rem;
 
     .contact-hero {
         display: flex;
@@ -13,10 +15,8 @@
     .contact-content {
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5rem;
-        width: 60%;
+        margin-top: 1rem;
+        width: 100%;
         padding: 2rem 1rem;
         background: linear-gradient(135deg, #1A1A1A 0%, #2B2B2B 50%, #3C3C3C 100%);
         border-radius: 1rem;
@@ -31,19 +31,18 @@
 
         .contact-info-div {
             flex: 1;
-            display: flex;
-            flex-direction: column;
             padding-bottom: 1rem;
             border-bottom: 1px solid white;
             padding: 1rem;
+            text-align: left;
 
             .contact-info-item {
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.75rem;
 
                 .contact-item-label {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     font-weight: 700;
-                    margin-right: 1rem;
+                    margin-right: 0.75rem;
                 }
 
                 .contact-item-value {
@@ -84,3 +83,12 @@
     display: flex;
     width: 100%;
 }
+
+@media (min-width: 1128px) {
+    .contact-container {
+        align-items: center;
+        .contact-content {
+            width: 50%;
+        }
+    }
+ }

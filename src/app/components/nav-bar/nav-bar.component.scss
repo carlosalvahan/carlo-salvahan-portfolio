@@ -1,6 +1,8 @@
 .custom-nav-container {
     background-color: transparent !important;
     box-shadow: none !important;
+    display: none;
+
     ul {
         list-style: none;
         padding: 0;
@@ -30,8 +32,10 @@
             &.active {
                 border-left: 0.5rem solid white;
                 font-weight: 700;
+
                 a {
                     padding-left: 1rem;
+
                     &:hover {
                         transform: none;
                     }
@@ -50,5 +54,197 @@
     .icon-spacing {
         margin-right: 0.5rem;
         margin-top: 0;
+    }
+}
+
+.mobile-nav {
+    display: flex;
+    max-width: 100%;
+    min-width: 100%;
+    flex: 1;
+    height: 4rem;
+
+    .mobile-nav-container {
+        display: flex;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 1rem 2rem;
+
+        .image-section {
+            display: flex;
+            flex: 1 1 auto;
+            color: white;
+
+            img.circle {
+                width: 2rem;
+                height: 2rem;
+                object-fit: cover;
+                object-position: center;
+                margin-right: 1rem;
+            }
+        }
+
+        .hamburger-section {
+            display: flex;
+            flex: 1;
+            justify-content: end;
+        }
+    }
+}
+
+.burger-side-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100dvh;
+    transition: left .3s ease;
+    z-index: 12;
+    overflow-y: hidden;
+    visibility: hidden;
+    &.show {
+        visibility: visible;
+    }
+
+    .close-button {
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 0.5rem;
+        color: white;
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .side-nav-content {
+        background: #212121;
+        width: 80%;
+        height: 100%;
+        z-index: 12;
+        position: absolute;
+        display: block;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 1.2s ease, opacity 1.2s ease;;
+        right: 0;
+        &.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .image-row {
+            margin: 2.5rem 0;
+            display: flex;
+            justify-content: center;
+            padding: 0 2rem;
+            .circle {
+                height: 5rem;
+                width: 5rem;
+            }
+            .text-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 1rem;
+                color: white;
+                flex: 1;
+            }
+        }
+    }
+
+    .side-nav-backdrop {
+        z-index: 12;
+        width: 100%;
+        opacity: 0.8;
+        position: absolute;
+        background: #333333;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+        &.show {
+            opacity: 0.8;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 1rem;
+        i {
+            margin-right: 1rem;
+            vertical-align: middle;
+            font-size: 2rem;
+            height: 2rem;
+        }
+
+        a {
+            display: flex;
+            align-items: baseline;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding-left: 2.5rem;
+
+            &:hover {
+                background-color: #333333;
+                transform: scale(1.1);
+            }
+        }
+
+        &.active {
+            border-left: 0.5rem solid white;
+            font-weight: 700;
+
+            a {
+                padding: 1rem;
+
+                &:hover {
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+.icon-spacing {
+    margin-right: 0.5rem;
+    margin-top: 0;
+}
+
+:host {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+@media (min-width: 1128px) {
+    .mobile-nav {
+        display: none;
+    }
+    
+    .custom-nav-container {
+        display: flex;
+        flex: 1;
+        height: 100%;
+    
+        ul {
+            width: 100%;
+            li.active {
+                a {
+                    padding: 0.5rem;
+                }
+            }
+        }
     }
 }
