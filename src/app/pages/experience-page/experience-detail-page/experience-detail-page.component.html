@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div> -->
-            <div class="company-container" [ngStyle]="{'animation-delay': 1 * $index + 's'}">
+            <div class="company-container" [ngStyle]="{'animation-delay': 0.5 *  $index + 's'}">
                 <div class="image-row">
                     <img class="card-image-src" [src]="company[1].imageUrl" alt="Kaneko">
                     <div class="text-row">
@@ -29,7 +29,7 @@
             <div class="detail-skills" [ngStyle]="{'border-color': 'white'}">
                 <div class="skill-list">
                     @for (skill of skills; track $index) {
-                    <div class="skill-group" [ngStyle]="{'animation-delay': (($index * 0.2) + companies.length) + 's'}">
+                    <div class="skill-group" [ngStyle]="{'animation-delay': (($index * 0.2) + (companies.length * 0.5)) + 's'}">
                         <div class="skill-item">
                         <i [ngClass]="skill.icon" [ngStyle]="{'color': skill.color}"></i>
                         </div>

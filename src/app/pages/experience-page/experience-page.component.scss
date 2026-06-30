@@ -17,12 +17,12 @@
     flex: 1;
 
     .page-header {
-      flex: 0 0 4rem;
+      flex: 0 0 5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
-      border-bottom: 1px solid #616161;
+      border-bottom: 3px solid #616161;
       font-weight: 700;
       position: sticky;
       top: 0;
@@ -42,7 +42,7 @@
         position: sticky;
         top: 0;
         overflow-y: none;
-        border-bottom: 1px solid #616161;
+        border-bottom: 3px solid #616161;
       }
       app-experience-detail-page {
         overflow-y: auto;

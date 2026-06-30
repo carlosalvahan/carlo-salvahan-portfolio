@@ -181,9 +181,9 @@ $content-header-color: white;
 
             .skill-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-                gap: 3rem;
-                padding: 2rem;
+                grid-template-columns: repeat(auto-fit, minmax(50px, 75px));
+                gap: 1rem;
+                padding: 1rem;
                 margin-top: 1rem;
                 justify-content: center;
 
@@ -195,7 +195,7 @@ $content-header-color: white;
                     border-radius: 1rem;
                     text-shadow: 2px 2px 2px #212121;
                     transition: transform 0.3s ease;
-                    font-size: 2vh;
+                    font-size: 1rem;
                     opacity: 0;
                     transform: translateY(50px);
                     transition: all 1s ease-out;
@@ -206,7 +206,7 @@ $content-header-color: white;
                     justify-content: space-between;
 
                     i {
-                        font-size: 10rem;
+                        font-size: 3.5rem;
                     }
 
                     &.show {
@@ -376,6 +376,17 @@ $content-header-color: white;
                 .about-me-content {
                     .download-cv-div {
                         text-align: right;
+                    }
+                }
+            }
+            .expertise-section {
+                .skill-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+                    div {
+                        font-size: 1.5rem;
+                        i {
+                            font-size: 10rem;
+                        }
                     }
                 }
             }

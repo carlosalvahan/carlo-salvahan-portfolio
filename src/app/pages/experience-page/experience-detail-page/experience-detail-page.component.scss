@@ -52,31 +52,30 @@ h3 {
         .card-action {
             border-bottom: 1px solid white;
         }
-        .company-header {
-            font-weight: 500;
-            font-size: 1.2rem;
-            margin: 0;
-            padding-bottom: 1rem;
+        
+        .company-container {
             opacity: 0;
             animation: fadeSlide 1s ease-out forwards;
-        }
-        .company-container {
             .image-row {
                 border: 1px solid #efefef;
                 padding: 1rem;
                 display: flex;
                 gap: 1rem;
                 margin-bottom: 0.5rem;
+                border-radius: 1rem;
+                .company-header {
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    padding-bottom: 1rem;
+                }
                 img {
                     height: 5rem;
                     width: 5rem;
-                    // padding: 3rem;
                     padding: 0.5rem;
                     background: white;
                     border-radius: 10%;
                     border: 2px solid #EFEFEF;
-                    opacity: 0;
-                    animation: fadeSlide 1s ease-out forwards;
                 }
                 .text-row {
                     display: flex;

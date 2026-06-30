@@ -15,12 +15,12 @@ $text-shadow: #424242 2px 2px 4px;
         font-weight: 700;
         border-bottom: 3px solid #616161;
         padding: 1rem 3rem;
+        justify-content: center;
 
         .header-container {
             color: #ffd180;
             text-shadow: $text-shadow;
             text-align: center;
-            margin-top: 2rem;
         }
 
     }

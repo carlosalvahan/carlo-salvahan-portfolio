@@ -5,7 +5,9 @@
         </div>
         <div class="page-content">
             <app-timeline [timelineItems]="experienceItems" (timelineSelected)="onTimelineSelected($event)"></app-timeline>
-            <app-experience-detail-page [detailItem]="detailSelected"></app-experience-detail-page>
+            @if(showDetails) {
+                <app-experience-detail-page [detailItem]="detailSelected"></app-experience-detail-page>
+            }
         </div>
     </div>
 </div>

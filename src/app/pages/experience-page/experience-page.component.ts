@@ -21,8 +21,14 @@ export class ExperiencePageComponent {
   ];
 
   detailSelected: TimelineProps = this.experienceItems[0];
+  showDetails: boolean = true;
 
   onTimelineSelected($event: TimelineProps) {
       this.detailSelected = $event;
+      this.showDetails = false;
+      setTimeout(() => {
+       this.showDetails = true; 
+      });
+
   }
 }
