@@ -252,6 +252,29 @@ $content-header-color: white;
         .projects-section {
             width: 100%;
 
+            .view-all-projects {
+                margin-top: 2rem;
+                opacity: 0;
+                transform: translateY(50px);
+                transition: all 1s ease-out;
+                
+                button {
+                    font-weight: 500;
+                    a {
+                        color: white;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.2);
+                    }
+                    border: none;
+                }
+                &.show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
             .project-header {
                 font-size: $content-header-font-size;
                 font-weight: $content-header-font-weight;
@@ -370,6 +393,12 @@ $content-header-color: white;
         .portfolio-section {
             padding-left: 1rem;
             padding-right: 1rem;
+        }
+
+        .projects-section {
+            .view-all-projects {
+                margin-left: 1rem;
+            }
         }
         .intro-content {
             .about-me-section {

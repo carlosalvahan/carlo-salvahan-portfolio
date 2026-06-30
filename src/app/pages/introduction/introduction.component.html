@@ -55,6 +55,13 @@
                     <button class="project-details-button primary-button" (click)="openProject('Airline Flight Booking')">Project Details</button>
                 </div>
             </div>
+            <div class="view-all-projects" appScrollAnimate>
+                <button>
+                    <a [routerLink]="'/projects'">
+                        View All Projects<i class="fa-solid fa-angles-right" style="color: rgb(99, 230, 190);"></i>
+                    </a>
+                </button>
+            </div>
         </div>
         <div class="expertise-section portfolio-section">
             <span class="expertise-header">Tech Stack<i class="fa-solid fa-code"

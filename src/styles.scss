@@ -4,6 +4,14 @@ $primary-button-border: 1px solid white;
 $primary-button-radius: 0.5rem;
 $primary-button-transition: transform 0.3s ease;
 
+button {
+    border: $primary-button-border;
+    border-radius: $primary-button-radius;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: $primary-button-color
+}
+
 .portfolio-section {
     padding-bottom: 10rem;
     text-align: center;

@@ -5,10 +5,11 @@ import { ProjectDetailsComponent } from '../projects-page/project-details/projec
 import { ProjectConstants } from '../../constants/project.constants';
 import { CompaniesConstants } from '../../constants/experience.constants';
 import { ContactPageComponent } from '../contact-page/contact-page.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-introduction',
-  imports: [ScrollAnimateDirective, ModalComponent, ProjectDetailsComponent, ContactPageComponent],
+  imports: [ScrollAnimateDirective, ModalComponent, ProjectDetailsComponent, ContactPageComponent, RouterModule],
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss'
 })
