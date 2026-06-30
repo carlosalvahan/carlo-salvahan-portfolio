@@ -30,10 +30,6 @@ $content-header-color: white;
             transition: all 1s ease-out;
             transform: translateY(5px);
 
-            &.show {
-                opacity: 1;
-                transform: translateX(0);
-            }
         }
 
         i {
@@ -86,10 +82,7 @@ $content-header-color: white;
                     transform: translateY(5px);
                     font-size: 2.5vh;
 
-                    &.show {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
+                    
                 }
 
 
@@ -134,10 +127,6 @@ $content-header-color: white;
                     transition: all 0.6s ease-out;
                     opacity: 0;
 
-                    &.show {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
 
                     &:nth-child(2) {
                         transition-delay: 0.2s;
@@ -201,10 +190,6 @@ $content-header-color: white;
                         font-size: 3.5rem;
                     }
 
-                    &.show {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
 
                     &:nth-child(2) {
                         transition-delay: 0.2s;
@@ -260,10 +245,6 @@ $content-header-color: white;
                     }
                     border: none;
                 }
-                &.show {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
             }
 
             .project-header {
@@ -297,10 +278,6 @@ $content-header-color: white;
                     transform: translateY(50px);
                     transition: all 1s ease-out;
 
-                    &.show {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
 
                     &:nth-child(2) {
                         transition-delay: 0.25s;
@@ -373,6 +350,11 @@ $content-header-color: white;
 
 :host {
     overflow-y: hidden;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media (min-width: 1128px) { 
