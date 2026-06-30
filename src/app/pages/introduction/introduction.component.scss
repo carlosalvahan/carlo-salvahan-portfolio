@@ -10,7 +10,7 @@ $content-header-color: white;
     height: 100vh;
     height: 100dvh;
     overflow-y: hidden;
-
+    color: $content-header-color;
 
     .intro-header {
         color: white;
@@ -73,7 +73,6 @@ $content-header-color: white;
                 position: relative;
 
                 .about-me-words {
-                    color: #e0e0e0;
                     opacity: 0;
                     transition: all 1s ease-out;
                     transform: translateY(5px);
@@ -162,7 +161,6 @@ $content-header-color: white;
 
                 div {
                     background: linear-gradient(135deg, #000000 0%, #0D0D0D 40%, #1A1A1A 70%, #262626 100%);
-                    color: white;
                     padding: 1rem 2rem;
                     border: 1px solid #616161;
                     border-radius: 1rem;
@@ -260,7 +258,6 @@ $content-header-color: white;
                     border: 1px solid #bdbdbd;
                     border-radius: 1rem;
                     background: linear-gradient(135deg, #1A1A1A 0%, #2B2B2B 50%, #3C3C3C 100%);
-                    color: white;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -315,7 +312,6 @@ $content-header-color: white;
                         i {
                             font-size: 4rem;
                             margin-bottom: 1rem;
-                            color: white;
                             text-shadow: 1px 1px 1px #212121;
                         }
                     }
