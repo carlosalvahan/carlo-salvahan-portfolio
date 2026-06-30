@@ -64,13 +64,6 @@ $content-header-color: white;
         .about-me-section {
             padding-top: 40px;
 
-            .about-header {
-                font-size: $content-header-font-size;
-                font-weight: $content-header-font-weight;
-                text-shadow: $content-header-text-shadow;
-                color: $content-header-color;
-            }
-
             .about-me-content {
                 border: 1px solid #616161;
                 border-radius: 1rem;
@@ -106,12 +99,6 @@ $content-header-color: white;
 
 
         .career-section {
-            .career-header {
-                font-size: $content-header-font-size;
-                font-weight: $content-header-font-weight;
-                text-shadow: $content-header-text-shadow;
-                color: $content-header-color;
-            }
 
             .company-images {
                 display: flex;
@@ -164,13 +151,6 @@ $content-header-color: white;
         }
 
         .expertise-section {
-
-            .expertise-header {
-                font-size: $content-header-font-size;
-                font-weight: $content-header-font-weight;
-                text-shadow: $content-header-text-shadow;
-                color: $content-header-color;
-            }
 
             .skill-grid {
                 display: grid;
@@ -266,12 +246,6 @@ $content-header-color: white;
                 }
             }
 
-            .project-header {
-                font-size: $content-header-font-size;
-                font-weight: $content-header-font-weight;
-                text-shadow: $content-header-text-shadow;
-                color: $content-header-color;
-            }
 
             .project-grid {
                 display: flex;
@@ -354,6 +328,10 @@ $content-header-color: white;
         .expertise-header,
         .career-header,
         .about-header {
+            font-size: $content-header-font-size;
+            font-weight: $content-header-font-weight;
+            text-shadow: $content-header-text-shadow;
+            color: $content-header-color;
             i {
                 margin-left: 1rem;
                 font-size: 2rem;
